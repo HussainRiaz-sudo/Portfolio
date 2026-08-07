@@ -137,7 +137,7 @@ function initRoleTyping() {
   type();
 }
 
-/* Projects Catalog with High-Signal Quantified Narratives */
+/* Projects Catalog with Verified Slide Presentation Data */
 const projectsData = [
   // SQL & Data Analytics Projects
   {
@@ -151,7 +151,7 @@ const projectsData = [
     badge: 'University Project',
     tech: ['SQL', 'Database Design', 'Oracle Database', 'Inventory Control'],
     hasRepoLink: false,
-    description: `Designed a normalized 7-table relational schema in Oracle Database seeded with operational records. Engineered complex multi-table JOINs, subqueries, and aggregation functions for real-time inventory-to-order reconciliation.`
+    description: `Designed a normalized relational database schema in Oracle Database for managing inventory, customer records, and order tracking. Built multi-table JOINs, constraints, and aggregation queries for operational record reconciliation.`
   },
   {
     id: 'baab-ul-salah',
@@ -196,9 +196,9 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['ml_ai'],
     icon: 'fa-film',
     badge: 'University Project',
-    tech: ['Data Science', 'Machine Learning', 'Python', 'Pandas', 'Cosine Similarity'],
+    tech: ['Data Science', 'KNN', 'Cosine Similarity', 'SciPy Sparse Matrix', 'FuzzyWuzzy'],
     hasRepoLink: false,
-    description: `Processed 100,000+ ratings across 9,000+ movies on the MovieLens dataset. Applied TF-IDF vectorization and Cosine Similarity for content-based filtering, combined with SVD matrix factorization for rating predictions.`
+    description: `Built an item-based movie recommendation system on the Kaggle MovieLens dataset. Preprocessed ratings into a user-movie pivot table and transformed data into a SciPy sparse matrix to optimize memory usage. Implemented K-Nearest Neighbors (KNN) with Cosine Similarity to compute movie distances, featuring FuzzyWuzzy string matching for title query resolution.`
   },
   {
     id: 'titanic-ml-prediction',
@@ -209,9 +209,9 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['ml_ai'],
     icon: 'fa-ship',
     badge: 'University Project',
-    tech: ['Machine Learning', 'Python', 'Pandas', 'Scikit-Learn', 'Ensemble Models'],
+    tech: ['Machine Learning', 'Random Forest', 'Scikit-Learn', 'Feature Imputation', 'Pandas'],
     hasRepoLink: false,
-    description: `Engineered custom features (FamilySize, Title extraction), handled missing data via median imputation, and benchmarked Logistic Regression, Random Forest, and Support Vector Machines (SVM)—achieving 82.5% accuracy with 5-fold cross-validation.`
+    description: `Analyzed the Kaggle Titanic dataset (891 training records, 12 features). Preprocessed missing values via median (Age, Fare) and mode (Embarked) imputation, dropped non-predictive text features (Name, Ticket, Cabin), and one-hot encoded categorical variables. Trained a Random Forest Classifier (100 estimators, random_state=42) on an 80/20 train/validation split, achieving 0.81 (81%) validation accuracy.`
   },
   {
     id: 'skin-cancer-detection',
@@ -222,9 +222,9 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['ml_ai'],
     icon: 'fa-notes-medical',
     badge: 'University Research Capstone',
-    tech: ['Python', 'Deep Learning', 'ResNet-50', 'Medical AI', 'Computer Vision'],
+    tech: ['Python', 'Deep Learning', 'CNN Architectures', 'Medical AI', 'Pandas'],
     hasRepoLink: false,
-    description: `Authored a University Capstone Research Paper evaluating Deep Learning for dermatological imaging. Trained ResNet-50 and EfficientNet Convolutional Neural Network (CNN) architectures on the ISIC dataset, utilizing SMOTE for class imbalance to achieve 94.2% ROC-AUC accuracy.`
+    description: `Authored a University Capstone Research Paper evaluating Deep Learning techniques for dermatological image classification. Explored Convolutional Neural Network (CNN) architectures and class-imbalance mitigation strategies for medical diagnostic imaging.`
   },
 
   // Systems & Software Engineering Category
