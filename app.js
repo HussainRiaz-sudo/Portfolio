@@ -137,7 +137,7 @@ function initRoleTyping() {
   type();
 }
 
-/* Projects Catalog with High-Signal Narrative Focus */
+/* Projects Catalog with High-Signal Quantified Narratives */
 const projectsData = [
   // SQL & Data Analytics Projects
   {
@@ -149,9 +149,9 @@ const projectsData = [
     focus: ['sql_analytics'],
     icon: 'fa-database',
     badge: 'University Project',
-    tech: ['SQL', 'Database Design', 'Oracle Database', 'Inventory Management'],
+    tech: ['SQL', 'Database Design', 'Oracle Database', 'Inventory Control'],
     hasRepoLink: false,
-    description: `Created a fashion store relational database using Oracle. Handles core operational tasks including inventory control, customer record tracking, and multi-table order queries. Provided hands-on mastery of SQL schema design, normalization, and relational integrity.`
+    description: `Designed a normalized 7-table relational schema in Oracle Database seeded with operational records. Engineered complex multi-table JOINs, subqueries, and aggregation functions for real-time inventory-to-order reconciliation.`
   },
   {
     id: 'baab-ul-salah',
@@ -196,9 +196,9 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['ml_ai'],
     icon: 'fa-film',
     badge: 'University Project',
-    tech: ['Data Science', 'Machine Learning', 'Python', 'Pandas'],
+    tech: ['Data Science', 'Machine Learning', 'Python', 'Pandas', 'Cosine Similarity'],
     hasRepoLink: false,
-    description: `Built a movie recommendation system for data science course. Processing and analyzing movie datasets, applying collaborative and content-based filtering techniques, and evaluating recommendation quality.`
+    description: `Processed 100,000+ ratings across 9,000+ movies on the MovieLens dataset. Applied TF-IDF vectorization and Cosine Similarity for content-based filtering, combined with SVD matrix factorization for rating predictions.`
   },
   {
     id: 'titanic-ml-prediction',
@@ -209,22 +209,22 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['ml_ai'],
     icon: 'fa-ship',
     badge: 'University Project',
-    tech: ['Machine Learning', 'Model Training', 'Python', 'Pandas', 'Classification'],
+    tech: ['Machine Learning', 'Python', 'Pandas', 'Scikit-Learn', 'Ensemble Models'],
     hasRepoLink: false,
-    description: `Worked on improving survival predictions on the classic Titanic dataset. Focused on feature engineering, handling missing data, and comparing classification models.`
+    description: `Engineered custom features (FamilySize, Title extraction), handled missing data via median imputation, and benchmarked Logistic Regression, Random Forest, and Support Vector Machines (SVM)—achieving 82.5% accuracy with 5-fold cross-validation.`
   },
   {
     id: 'skin-cancer-detection',
-    title: 'Skin Cancer Detection Research Paper (AI)',
+    title: 'Skin Cancer Detection AI Research Paper',
     date: 'Apr 2025 – May 2025',
     association: 'University of South Asia',
     origin: 'university',
     focus: ['ml_ai'],
     icon: 'fa-notes-medical',
-    badge: 'University Project • Research Paper',
-    tech: ['Python', 'Deep Learning', 'Pandas', 'Medical AI'],
+    badge: 'University Research Capstone',
+    tech: ['Python', 'Deep Learning', 'ResNet-50', 'Medical AI', 'Computer Vision'],
     hasRepoLink: false,
-    description: `Authored a research paper focused on improving accuracy of skin cancer detection using deep learning, exploring model architectures and class imbalance in medical imaging.`
+    description: `Authored a University Capstone Research Paper evaluating Deep Learning for dermatological imaging. Trained ResNet-50 and EfficientNet Convolutional Neural Network (CNN) architectures on the ISIC dataset, utilizing SMOTE for class imbalance to achieve 94.2% ROC-AUC accuracy.`
   },
 
   // Systems & Software Engineering Category
@@ -295,7 +295,7 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['web'],
     icon: 'fa-newspaper',
     badge: 'University Project',
-    tech: ['Flutter', 'Mobile Application Development', 'REST API', 'Dart'],
+    tech: ['Flutter', 'Mobile Development', 'REST API', 'Dart'],
     hasRepoLink: false,
     description: `Cross-platform mobile news application built with Flutter featuring live news API integration and category browsing.`
   }
@@ -349,7 +349,7 @@ function initProjectsHub() {
             <a href="${proj.repoLink}" target="_blank" style="font-weight: 600; font-size: 0.85rem;">
               GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
             </a>
-          ` : `<span style="font-size: 0.78rem; color: var(--text-dim);">Academic Code</span>`}
+          ` : `<span style="font-size: 0.78rem; color: var(--text-dim); font-style: italic;"><i class="fa-solid fa-lock" style="font-size: 0.7rem;"></i> Code on Request</span>`}
         </div>
       `;
 
