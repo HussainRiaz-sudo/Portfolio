@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0D1117"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#3FB950" stroke-width="2.5" opacity="0.9"/>
+  <text x="32" y="41" font-family="'Noto Nastaliq Urdu', 'Amiri', 'Traditional Arabic', serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">حسین</text>
+</svg>

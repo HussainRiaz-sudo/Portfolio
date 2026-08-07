@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap');
 
 /* ==========================================================================
    Muhammad Hussain Riaz — Portfolio Stylesheet
@@ -150,8 +150,9 @@ body.light-mode .navbar {
   display: inline-block;
 }
 #brand-name-typing.urdu-font {
-  font-family: 'Noto Nastaliq Urdu', 'Amiri', var(--font-heading);
+  font-family: 'Noto Sans Arabic', 'Cairo', 'Segoe UI', sans-serif;
   font-size: 1.15rem;
+  font-weight: 700;
   direction: rtl;
 }
 .brand-cursor {
