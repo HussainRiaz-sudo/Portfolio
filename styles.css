@@ -53,17 +53,22 @@ body.light-mode {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url('assets/dragon_sword.svg') 0 0, auto !important;
+  cursor: url('assets/dragon_sword.svg') 2 2, auto !important;
 }
 
-/* Clickable elements & hover states force glowing Dragon Sword active cursor */
+/* Clickable elements & hover states force glowing Dragon Sword active cursor & glowing aura */
 a, a:hover, button, button:hover, .tag-btn, .tag-btn:hover, .project-card, .project-card:hover, .cert-img-box, .cert-img-box:hover, .social-icon-btn, .social-icon-btn:hover, .modal-close-btn, .view-detail-btn, .btn, .btn:hover {
-  cursor: url('assets/dragon_sword_hover.svg') 0 0, pointer !important;
+  cursor: url('assets/dragon_sword_hover.svg') 2 2, pointer !important;
+}
+
+/* Intense Glowing Emerald Hover Aura on Interactive Elements */
+a:hover, button:hover, .btn:hover, .nav-cta:hover, .social-icon-btn:hover, .tag-btn:hover {
+  filter: drop-shadow(0 0 8px var(--accent-teal));
 }
 
 /* Non-clickable badges, text, and skill pills keep clean default Dragon Sword cursor without text I-beam */
 .skill-pill, .skill-item, .skills-category-card, p, h1, h2, h3, h4, h5, h6, span, div {
-  cursor: url('assets/dragon_sword.svg') 0 0, auto !important;
+  cursor: url('assets/dragon_sword.svg') 2 2, auto !important;
 }
 
 html {
