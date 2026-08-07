@@ -137,7 +137,7 @@ function initRoleTyping() {
   type();
 }
 
-/* Projects Catalog with Multi-Category Support */
+/* Projects Catalog with High-Signal Narrative Focus */
 const projectsData = [
   // SQL & Data Analytics Projects
   {
@@ -151,7 +151,7 @@ const projectsData = [
     badge: 'University Project',
     tech: ['SQL', 'Database Design', 'Oracle Database', 'Inventory Management'],
     hasRepoLink: false,
-    description: `Created a fashion store database using Oracle. It handles essential tasks like managing inventory, customer data, and order tracking. Provided hands-on experience with SQL and relational database design.`
+    description: `Created a fashion store relational database using Oracle. Handles core operational tasks including inventory control, customer record tracking, and multi-table order queries. Provided hands-on mastery of SQL schema design, normalization, and relational integrity.`
   },
   {
     id: 'baab-ul-salah',
@@ -170,6 +170,20 @@ const projectsData = [
 ML & Backend: Congregation timing prediction model is a Random Forest Regressor trained on 51,000+ rows of seasonal offset data (< 3s MAE). Microservices architecture on FastAPI and ASP.NET Core gateway with SQL Server database design.
 
 My Role — Backend & Machine Learning Engineer: Astronomical baseline calculations, Random Forest model training, FastAPI microservice development, and AI chatbot design.`
+  },
+  {
+    id: 'patient-tracker-js',
+    title: 'Patient-Tracker Workflow Application',
+    date: 'Jul 2026 – Aug 2026',
+    association: 'Personal Project',
+    origin: 'personal',
+    focus: ['web', 'sql_analytics'],
+    icon: 'fa-hospital-user',
+    badge: 'Personal Project',
+    tech: ['JavaScript', 'HTML5/CSS3', 'Workflow Management', 'Financial Ledger'],
+    hasRepoLink: true,
+    repoLink: 'https://github.com/HussainRiaz-sudo/Patient-Tracker',
+    description: `Custom web application built for healthcare workflow management and financial ledger tracking. Implements automated 70/30 revenue distribution calculations between attending physicians and medical facilities.`
   },
 
   // Machine Learning & AI Category Projects
@@ -213,19 +227,23 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     description: `Authored a research paper focused on improving accuracy of skin cancer detection using deep learning, exploring model architectures and class imbalance in medical imaging.`
   },
 
-  // Systems & Security Category
+  // Systems & Software Engineering Category
   {
-    id: 'scientific-calculator-8086',
-    title: 'Scientific Calculator | 8086 Assembly Language',
-    date: 'May 2026 – May 2026',
+    id: 'cpp-systems-foundations',
+    title: 'C++ Systems & OOP Foundations',
+    date: 'Jun 2023 – Jun 2024',
     association: 'University of South Asia',
     origin: 'university',
     focus: ['systems'],
-    icon: 'fa-microchip',
-    badge: 'University Project',
-    tech: ['Assembly Language', 'x86 Assembly', '8086 Registers', 'DOS Interrupts'],
+    icon: 'fa-code',
+    badge: 'University Projects Suite',
+    tech: ['C++', 'Data Structures', 'OOP', 'Algorithms'],
     hasRepoLink: false,
-    description: `Functional scientific calculator in 8086 Assembly Language running on EMU8086. Implemented 9 math operations using processor registers and DOS interrupts (INT 21h).`
+    description: `Comprehensive suite of software engineering foundation projects built in C++ during Computer Science coursework:
+
+• Library Management System: Custom linked-list data structure for adding, searching, and managing catalog records.
+• E-License Verification System: Object-oriented architecture enforcing age-eligibility validation logic (18+).
+• Banking Transaction System: Simulating core financial account operations, deposits, withdrawals, and ledger balances.`
   },
   {
     id: 'local-password-manager',
@@ -241,60 +259,20 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     description: `Locally stored credential manager with AES-256 encryption. Won 1st place in Cyber Security Idea Competition for product pitching and usability.`
   },
   {
-    id: 'library-system-cpp',
-    title: 'Library Management System in C++',
-    date: 'May 2024 – Jun 2024',
+    id: 'scientific-calculator-8086',
+    title: 'Scientific Calculator | 8086 Assembly Language',
+    date: 'May 2026 – May 2026',
     association: 'University of South Asia',
     origin: 'university',
     focus: ['systems'],
-    icon: 'fa-book-bookmark',
+    icon: 'fa-microchip',
     badge: 'University Project',
-    tech: ['Coding Experience', 'Data Structures', 'C++', 'Linked Lists'],
+    tech: ['Assembly Language', 'x86 Assembly', '8086 Registers', 'DOS Interrupts'],
     hasRepoLink: false,
-    description: `Library management system using linked lists in C++ for adding, deleting, and searching books.`
-  },
-  {
-    id: 'elicense-system-cpp',
-    title: 'E-License System Project in C++',
-    date: 'Oct 2023 – Nov 2023',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-id-card',
-    badge: 'University Project',
-    tech: ['Coding Experience', 'Object-Oriented Programming (OOP)', 'C++', 'Inheritance'],
-    hasRepoLink: false,
-    description: `E-License system in C++ utilizing Object-Oriented Programming concepts with age eligibility verification (18+).`
-  },
-  {
-    id: 'banking-system-cpp',
-    title: 'Banking System Project in C++',
-    date: 'Jun 2023 – Jul 2023',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-piggy-bank',
-    badge: 'University Project',
-    tech: ['Coding Experience', 'Programming', 'C++', 'Control Structures'],
-    hasRepoLink: false,
-    description: `Banking system in C++ simulating core account creation, deposit, withdrawal, and balance inquiry transactions.`
+    description: `Functional scientific calculator in 8086 Assembly Language running on EMU8086. Implemented 9 math operations using processor registers and DOS interrupts (INT 21h).`
   },
 
   // Web & Mobile Apps Category
-  {
-    id: 'patient-tracker-js',
-    title: 'Patient-Tracker Workflow Application',
-    date: 'Jul 2026 – Aug 2026',
-    association: 'Personal Project',
-    origin: 'personal',
-    focus: ['web'],
-    icon: 'fa-hospital-user',
-    badge: 'Personal Project',
-    tech: ['JavaScript', 'HTML/CSS', 'Workflow Management', '70/30 Revenue Split'],
-    hasRepoLink: true,
-    repoLink: 'https://github.com/HussainRiaz-sudo/Patient-Tracker',
-    description: `Custom web application built for healthcare workflow management and 70-30% revenue sharing tracking between medical facilities and attending physicians.`
-  },
   {
     id: 'todo-django-rest',
     title: 'To-Do List App (Django REST API)',
@@ -320,19 +298,6 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     tech: ['Flutter', 'Mobile Application Development', 'REST API', 'Dart'],
     hasRepoLink: false,
     description: `Cross-platform mobile news application built with Flutter featuring live news API integration and category browsing.`
-  },
-  {
-    id: 'monster-wiki-html',
-    title: 'Wiki Page Development for the Anime Monster',
-    date: 'Apr 2023 – May 2023',
-    association: 'Personal Project',
-    origin: 'personal',
-    focus: ['web'],
-    icon: 'fa-globe',
-    badge: 'Personal Project',
-    tech: ['Coding Experience', 'Front-end Coding', 'HTML', 'CSS'],
-    hasRepoLink: false,
-    description: `Developed a wiki page for the anime Monster using HTML and CSS, focusing on creating a well-structured, responsive, and visually appealing design.`
   }
 ];
 
