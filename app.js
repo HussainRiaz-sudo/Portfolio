@@ -180,10 +180,10 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['web', 'sql_analytics'],
     icon: 'fa-hospital-user',
     badge: 'Personal Project',
-    tech: ['JavaScript', 'HTML5/CSS3', 'Workflow Management', 'Financial Ledger'],
+    tech: ['JavaScript', 'HTML5/CSS3', 'Chart.js', 'Google Sheets API', 'PDF Reports', 'Financial Analytics'],
     hasRepoLink: true,
     repoLink: 'https://github.com/HussainRiaz-sudo/Patient-Tracker',
-    description: `Custom web application built for healthcare workflow management and financial ledger tracking. Implements automated 70/30 revenue distribution calculations between attending physicians and medical facilities.`
+    description: `Dr Naila Patient Tracker is a high-performance, offline-first web application designed for medical practitioners to manage patient intake and revenue-sharing across multiple clinical locations. Built using vanilla JavaScript, HTML5, and CSS3, it features an instant multi-hospital switcher supporting custom split algorithms (30% / 70% vs 70% / 30%) in Pakistani Rupees (PKR) with complete browser LocalStorage data isolation. The platform includes interactive Chart.js financial analytics, advanced multi-criteria search filters, and an automated background sync engine connecting to Google Sheets. It empowers doctors to generate official, multi-page Itemized Monthly PDF Settlement Reports containing patient serial numbers, names, creation timestamps, and signature verification blocks for hospital proof of earnings.`
   },
 
   // Machine Learning & AI Category Projects
