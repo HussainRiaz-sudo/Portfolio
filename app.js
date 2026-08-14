@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectsHub();
   initModalLogic();
   initProfileAvatarModal();
+  initCertificationsFilter();
 });
 
 /* Theme Toggle (Dark Mode / Light Mode with LocalStorage persistence) */
@@ -441,5 +442,29 @@ function initProfileAvatarModal() {
   if (!avatar) return;
   avatar.addEventListener('click', () => {
     openCertImageModal('assets/hussain_profile.jpg', 'Muhammad Hussain Riaz — Portrait');
+  });
+}
+
+function initCertificationsFilter() {
+  const filterBtns = document.querySelectorAll('.cert-category-chips .tag-btn');
+  const certCards = document.querySelectorAll('.cert-card');
+  if (!filterBtns.length || !certCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedCategory = btn.getAttribute('data-cert-cat');
+
+      certCards.forEach(card => {
+        const cardCat = card.getAttribute('data-cert-category');
+        if (selectedCategory === 'all' || cardCat === selectedCategory) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
   });
 }

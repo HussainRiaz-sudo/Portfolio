@@ -178,21 +178,69 @@
       <h2 class="section-title">Academic Background</h2>
     </div>
 
-    <div class="education-card">
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
-        <div>
-          <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main);">Bachelor of Science in Computer Science</h3>
-          <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
-            University of South Asia
-          </p>
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <!-- Education 1: BS CS (Latest: Sep 2022 – Jul 2026) -->
+      <div class="education-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main);">Bachelor of Science in Computer Science</h3>
+            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
+              University of South Asia
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+              <i class="fa-regular fa-calendar"></i> Sep 2022 – Jul 2026
+            </span>
+            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
+              Grade: B
+            </span>
+          </div>
         </div>
-        <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
-          <i class="fa-regular fa-calendar"></i> Sep 2022 – Jul 2026
-        </span>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+          Four years of computer science gave me a strong foundation in programming, algorithms, and analytical thinking.
+        </p>
       </div>
-      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
-        Four years of computer science gave me a strong foundation in programming, algorithms, and analytical thinking.
-      </p>
+
+      <!-- Education 2: Intermediate ICS (2020 – 2022) -->
+      <div class="education-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main);">Intermediate with Computer Science (ICS)</h3>
+            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
+              Computer Science Stream
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+              <i class="fa-regular fa-calendar"></i> 2020 – 2022
+            </span>
+            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
+              Grade: A
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education 3: Matriculation (2006 – 2020) -->
+      <div class="education-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main);">Matriculation with Computer Science</h3>
+            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
+              Computer Science Stream
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+              <i class="fa-regular fa-calendar"></i> 2006 – 2020
+            </span>
+            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
+              Grade: A+
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -316,9 +364,21 @@
       <p class="section-subtitle">Professional certifications in Python data analysis, data literacy, AI fluency, and enterprise governance.</p>
     </div>
 
+    <!-- Certifications Category Filter Chips -->
+    <div class="filter-bar" style="margin-bottom: 2rem;">
+      <div class="filter-row">
+        <span class="filter-label">Filter:</span>
+        <div class="cert-category-chips">
+          <button class="tag-btn active" data-cert-cat="all">All Certifications (5)</button>
+          <button class="tag-btn" data-cert-cat="data">Data Related Certifications (3)</button>
+          <button class="tag-btn" data-cert-cat="ai">AI Related Certifications (2)</button>
+        </div>
+      </div>
+    </div>
+
     <div class="certifications-grid">
       <!-- Cert 1: Data Governance Fundamentals -->
-      <div class="cert-card">
+      <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_governance.jpg', 'Data Governance Fundamentals — DataCamp')">
           <img src="certs/datacamp_governance.jpg" alt="Data Governance Fundamentals DataCamp Certificate">
           <div class="cert-img-overlay">
@@ -352,7 +412,7 @@
       </div>
 
       <!-- Cert 2: Data Literacy Professional -->
-      <div class="cert-card">
+      <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_literacy.jpg', 'Data Literacy Professional — DataCamp')">
           <img src="certs/datacamp_literacy.jpg" alt="Data Literacy Professional DataCamp Certificate">
           <div class="cert-img-overlay">
@@ -386,7 +446,7 @@
       </div>
 
       <!-- Cert 3: AI Fluency -->
-      <div class="cert-card">
+      <div class="cert-card" data-cert-category="ai">
         <div class="cert-img-box" onclick="openCertImageModal('certs/anthropic_ai_fluency.jpg', 'AI Fluency: Framework & Foundations — Anthropic')">
           <img src="certs/anthropic_ai_fluency.jpg" alt="AI Fluency Framework & Foundations Certificate">
           <div class="cert-img-overlay">
@@ -420,7 +480,7 @@
       </div>
 
       <!-- Cert 4: NAVTTC Data Analysis Using Python -->
-      <div class="cert-card">
+      <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/navttc_python.jpg', 'Data Analysis Using Python — NAVTTC (Grade A+)')">
           <img src="certs/navttc_python.jpg" alt="Data Analysis Using Python NAVTTC Certificate Grade A+">
           <div class="cert-img-overlay">
@@ -454,7 +514,7 @@
       </div>
 
       <!-- Cert 5: Claude 101 -->
-      <div class="cert-card">
+      <div class="cert-card" data-cert-category="ai">
         <div class="cert-img-box" onclick="openCertImageModal('certs/anthropic_claude_101.jpg', 'Claude 101 — Anthropic')">
           <img src="certs/anthropic_claude_101.jpg" alt="Claude 101 Anthropic Certificate">
           <div class="cert-img-overlay">
