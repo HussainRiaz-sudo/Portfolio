@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModalLogic();
   initProfileAvatarModal();
   initCertificationsFilter();
+  initScrollSpy();
 });
 
 /* Theme Toggle (Dark Mode / Light Mode with LocalStorage persistence) */
@@ -458,6 +459,57 @@ function initCertificationsFilter() {
           card.style.display = 'none';
         }
       });
+    });
+  });
+}
+
+/* ScrollSpy Topbar Active Link Glow Indicator */
+function initScrollSpy() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  if (!sections.length || !navLinks.length) return;
+
+  function setActiveNav(id) {
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === `#${id}`) {
+        link.classList.add('active-glow');
+      } else {
+        link.classList.remove('active-glow');
+      }
+    });
+  }
+
+  function updateActiveOnScroll() {
+    const scrollPos = window.scrollY + 180;
+
+    let activeId = '';
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        activeId = sec.getAttribute('id');
+      }
+    });
+
+    if (activeId) {
+      setActiveNav(activeId);
+    } else if (window.scrollY < 300) {
+      navLinks.forEach(l => l.classList.remove('active-glow'));
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveOnScroll, { passive: true });
+  updateActiveOnScroll();
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const targetId = href.substring(1);
+        setActiveNav(targetId);
+      }
     });
   });
 }
