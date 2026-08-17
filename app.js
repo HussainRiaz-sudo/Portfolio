@@ -141,19 +141,19 @@ function initRoleTyping() {
 
 /* Projects Catalog with Verified Slide Presentation Data */
 const projectsData = [
-  // SQL & Data Analytics Projects
   {
-    id: 'fashion-store-oracle',
-    title: 'Fashion Store Database using Oracle',
-    date: 'May 2024 – Jun 2024',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['sql_analytics'],
-    icon: 'fa-database',
-    badge: 'University Project',
-    tech: ['SQL', 'Database Design', 'Oracle Database', 'Inventory Control'],
-    hasRepoLink: false,
-    description: `Designed a normalized relational database schema in Oracle Database for managing inventory, customer records, and order tracking. Built multi-table JOINs, constraints, and aggregation queries for operational record reconciliation.`
+    id: 'patient-tracker-js',
+    title: 'Patient-Tracker Workflow Application',
+    date: 'Jul 2026 – Aug 2026',
+    association: 'Personal Project',
+    origin: 'personal',
+    focus: ['web', 'sql_analytics'],
+    icon: 'fa-hospital-user',
+    badge: 'Personal Project',
+    tech: ['JavaScript', 'HTML5/CSS3', 'PIN Security', 'Chart.js', 'Google Sheets API', 'PDF Reports', 'Financial Analytics'],
+    hasRepoLink: true,
+    repoLink: 'https://github.com/HussainRiaz-sudo/Patient-Tracker',
+    description: `Dr Naila Patient Tracker is a high-performance, offline-first web application designed for medical practitioners to manage patient intake, ward admissions, surgical procedures, and revenue-sharing across multiple clinical locations. Built using vanilla JavaScript, HTML5, and CSS3, it features an instant multi-hospital switcher supporting custom split algorithms in Pakistani Rupees (PKR) alongside specialized 100% Doctor Payout modules for procedures and ward admission fees. The platform includes a session-based 4-digit PIN Security Lock protecting accumulated financial ledgers and reports, a 1-tap Dark/Light Mode theme engine, retroactive cross-hospital Patient History profiles with fuzzy base name matching, an interactive decision modal workflow, clean autocomplete patient deduplication, Chart.js financial analytics, and an automated background sync engine connecting to Google Sheets. It empowers doctors to generate official, multi-page Itemized Monthly PDF Settlement Reports containing patient serial numbers, consultation date/time stamps, and signature verification blocks for hospital proof of earnings.`
   },
   {
     id: 'baab-ul-salah',
@@ -174,21 +174,18 @@ ML & Backend: Congregation timing prediction model is a Random Forest Regressor 
 My Role — Backend & Machine Learning Engineer: Astronomical baseline calculations, Random Forest model training, FastAPI microservice development, and AI chatbot design.`
   },
   {
-    id: 'patient-tracker-js',
-    title: 'Patient-Tracker Workflow Application',
-    date: 'Jul 2026 – Aug 2026',
-    association: 'Personal Project',
-    origin: 'personal',
-    focus: ['web', 'sql_analytics'],
-    icon: 'fa-hospital-user',
-    badge: 'Personal Project',
-    tech: ['JavaScript', 'HTML5/CSS3', 'PIN Security', 'Chart.js', 'Google Sheets API', 'PDF Reports', 'Financial Analytics'],
-    hasRepoLink: true,
-    repoLink: 'https://github.com/HussainRiaz-sudo/Patient-Tracker',
-    description: `Dr Naila Patient Tracker is a high-performance, offline-first web application designed for medical practitioners to manage patient intake, ward admissions, surgical procedures, and revenue-sharing across multiple clinical locations. Built using vanilla JavaScript, HTML5, and CSS3, it features an instant multi-hospital switcher supporting custom split algorithms in Pakistani Rupees (PKR) alongside specialized 100% Doctor Payout modules for procedures and ward admission fees. The platform includes a session-based 4-digit PIN Security Lock protecting accumulated financial ledgers and reports, a 1-tap Dark/Light Mode theme engine, retroactive cross-hospital Patient History profiles with fuzzy base name matching, an interactive decision modal workflow, clean autocomplete patient deduplication, Chart.js financial analytics, and an automated background sync engine connecting to Google Sheets. It empowers doctors to generate official, multi-page Itemized Monthly PDF Settlement Reports containing patient serial numbers, consultation date/time stamps, and signature verification blocks for hospital proof of earnings.`
+    id: 'scientific-calculator-8086',
+    title: 'Scientific Calculator | 8086 Assembly Language',
+    date: 'May 2026 – May 2026',
+    association: 'University of South Asia',
+    origin: 'university',
+    focus: ['systems'],
+    icon: 'fa-microchip',
+    badge: 'University Project',
+    tech: ['Assembly Language', 'x86 Assembly', '8086 Registers', 'DOS Interrupts'],
+    hasRepoLink: false,
+    description: `Functional scientific calculator in 8086 Assembly Language running on EMU8086. Implemented 9 math operations using processor registers and DOS interrupts (INT 21h).`
   },
-
-  // Machine Learning & AI Category Projects
   {
     id: 'movie-recommender',
     title: 'Movie Recommender System (Data Science)',
@@ -203,17 +200,30 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     description: `Built an item-based movie recommendation system on the Kaggle MovieLens dataset. Preprocessed ratings into a user-movie pivot table and transformed data into a SciPy sparse matrix to optimize memory usage. Implemented K-Nearest Neighbors (KNN) with Cosine Similarity to compute movie distances, featuring FuzzyWuzzy string matching for title query resolution.`
   },
   {
-    id: 'titanic-ml-prediction',
-    title: 'Titanic Survival Prediction (ML)',
-    date: 'May 2024 – Jun 2024',
+    id: 'local-password-manager',
+    title: 'Local Password Manager (AES-256)',
+    date: 'May 2025 – Jun 2025',
     association: 'University of South Asia',
     origin: 'university',
-    focus: ['ml_ai'],
-    icon: 'fa-ship',
-    badge: 'University Project',
-    tech: ['Machine Learning', 'Random Forest', 'Scikit-Learn', 'Feature Imputation', 'Pandas'],
+    focus: ['systems'],
+    icon: 'fa-key',
+    badge: 'University Project • Competition Winner 🏆',
+    tech: ['Cybersecurity', 'AES-256', 'Product Pitching', 'Usability'],
     hasRepoLink: false,
-    description: `Analyzed the Kaggle Titanic dataset (891 training records, 12 features). Preprocessed missing values via median (Age, Fare) and mode (Embarked) imputation, dropped non-predictive text features (Name, Ticket, Cabin), and one-hot encoded categorical variables. Trained a Random Forest Classifier (100 estimators, random_state=42) on an 80/20 train/validation split, achieving 0.81 (81%) validation accuracy.`
+    description: `Locally stored credential manager with AES-256 encryption. Won 1st place in Cyber Security Idea Competition for product pitching and usability.`
+  },
+  {
+    id: 'todo-django-rest',
+    title: 'To-Do List App (Django REST API)',
+    date: 'May 2025 – Jun 2025',
+    association: 'University of South Asia',
+    origin: 'university',
+    focus: ['web'],
+    icon: 'fa-list-check',
+    badge: 'University Project',
+    tech: ['Python', 'Django', 'Django REST Framework', 'REST API'],
+    hasRepoLink: false,
+    description: `Full-stack task management application built with Django REST Framework exposing CRUD RESTful endpoints.`
   },
   {
     id: 'skin-cancer-detection',
@@ -228,8 +238,45 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     hasRepoLink: false,
     description: `Authored a University Capstone Research Paper evaluating Deep Learning techniques for dermatological image classification. Explored Convolutional Neural Network (CNN) architectures and class-imbalance mitigation strategies for medical diagnostic imaging.`
   },
-
-  // Systems & Software Engineering Category
+  {
+    id: 'flutter-news-app',
+    title: 'News App (Flutter)',
+    date: 'Mar 2025 – Apr 2025',
+    association: 'University of South Asia',
+    origin: 'university',
+    focus: ['web'],
+    icon: 'fa-newspaper',
+    badge: 'University Project',
+    tech: ['Flutter', 'Mobile Development', 'REST API', 'Dart'],
+    hasRepoLink: false,
+    description: `Cross-platform mobile news application built with Flutter featuring live news API integration and category browsing.`
+  },
+  {
+    id: 'fashion-store-oracle',
+    title: 'Fashion Store Database using Oracle',
+    date: 'May 2024 – Jun 2024',
+    association: 'University of South Asia',
+    origin: 'university',
+    focus: ['sql_analytics'],
+    icon: 'fa-database',
+    badge: 'University Project',
+    tech: ['SQL', 'Database Design', 'Oracle Database', 'Inventory Control'],
+    hasRepoLink: false,
+    description: `Designed a normalized relational database schema in Oracle Database for managing inventory, customer records, and order tracking. Built multi-table JOINs, constraints, and aggregation queries for operational record reconciliation.`
+  },
+  {
+    id: 'titanic-ml-prediction',
+    title: 'Titanic Survival Prediction (ML)',
+    date: 'May 2024 – Jun 2024',
+    association: 'University of South Asia',
+    origin: 'university',
+    focus: ['ml_ai'],
+    icon: 'fa-ship',
+    badge: 'University Project',
+    tech: ['Machine Learning', 'Random Forest', 'Scikit-Learn', 'Feature Imputation', 'Pandas'],
+    hasRepoLink: false,
+    description: `Analyzed the Kaggle Titanic dataset (891 training records, 12 features). Preprocessed missing values via median (Age, Fare) and mode (Embarked) imputation, dropped non-predictive text features (Name, Ticket, Cabin), and one-hot encoded categorical variables. Trained a Random Forest Classifier (100 estimators, random_state=42) on an 80/20 train/validation split, achieving 0.81 (81%) validation accuracy.`
+  },
   {
     id: 'cpp-systems-foundations',
     title: 'C++ Systems & OOP Foundations',
@@ -246,60 +293,6 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
 • Library Management System: Custom linked-list data structure for adding, searching, and managing catalog records.
 • E-License Verification System: Object-oriented architecture enforcing age-eligibility validation logic (18+).
 • Banking Transaction System: Simulating core financial account operations, deposits, withdrawals, and ledger balances.`
-  },
-  {
-    id: 'local-password-manager',
-    title: 'Local Password Manager (AES-256)',
-    date: 'May 2025 – Jun 2025',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-key',
-    badge: 'University Project • Competition Winner 🏆',
-    tech: ['Cybersecurity', 'AES-256', 'Product Pitching', 'Usability'],
-    hasRepoLink: false,
-    description: `Locally stored credential manager with AES-256 encryption. Won 1st place in Cyber Security Idea Competition for product pitching and usability.`
-  },
-  {
-    id: 'scientific-calculator-8086',
-    title: 'Scientific Calculator | 8086 Assembly Language',
-    date: 'May 2026 – May 2026',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-microchip',
-    badge: 'University Project',
-    tech: ['Assembly Language', 'x86 Assembly', '8086 Registers', 'DOS Interrupts'],
-    hasRepoLink: false,
-    description: `Functional scientific calculator in 8086 Assembly Language running on EMU8086. Implemented 9 math operations using processor registers and DOS interrupts (INT 21h).`
-  },
-
-  // Web & Mobile Apps Category
-  {
-    id: 'todo-django-rest',
-    title: 'To-Do List App (Django REST API)',
-    date: 'May 2025 – Jun 2025',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['web'],
-    icon: 'fa-list-check',
-    badge: 'University Project',
-    tech: ['Python', 'Django', 'Django REST Framework', 'REST API'],
-    hasRepoLink: false,
-    description: `Full-stack task management application built with Django REST Framework exposing CRUD RESTful endpoints.`
-  },
-  {
-    id: 'flutter-news-app',
-    title: 'News App (Flutter)',
-    date: 'Mar 2025 – Apr 2025',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['web'],
-    icon: 'fa-newspaper',
-    badge: 'University Project',
-    tech: ['Flutter', 'Mobile Development', 'REST API', 'Dart'],
-    hasRepoLink: false,
-    description: `Cross-platform mobile news application built with Flutter featuring live news API integration and category browsing.`
   }
 ];
 
