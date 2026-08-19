@@ -12,8 +12,14 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="apple-touch-icon" href="assets/favicon.png">
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+  
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   
   <!-- Vercel Web Analytics & Speed Insights -->
   <script>
@@ -124,7 +130,7 @@
       <div class="about-card">
         <div style="display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1rem;">
           <div class="profile-avatar-frame" title="Click to view full portrait photo">
-            <img src="assets/hussain_profile.jpg" alt="Muhammad Hussain Riaz" class="profile-avatar-img">
+            <img src="assets/hussain_profile.jpg" alt="Muhammad Hussain Riaz" class="profile-avatar-img" loading="lazy" decoding="async">
           </div>
           <div>
             <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem;"><i class="fa-solid fa-compass" style="color: var(--accent-teal);"></i> Curiosity Beyond Spreadsheets</h3>
@@ -389,7 +395,7 @@
       <!-- Cert 1: GDPR and Data Privacy Fundamentals (August 17, 2026) -->
       <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_gdpr.jpg', 'GDPR and Data Privacy Fundamentals — DataCamp')">
-          <img src="certs/datacamp_gdpr.jpg" alt="GDPR and Data Privacy Fundamentals DataCamp Certificate">
+          <img src="certs/datacamp_gdpr.jpg" alt="GDPR and Data Privacy Fundamentals DataCamp Certificate" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
@@ -423,7 +429,7 @@
       <!-- Cert 2: AI Fundamentals (August 17, 2026) -->
       <div class="cert-card" data-cert-category="ai">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_ai_fundamentals.jpg', 'AI Fundamentals — DataCamp')">
-          <img src="certs/datacamp_ai_fundamentals.jpg" alt="AI Fundamentals DataCamp Certificate">
+          <img src="certs/datacamp_ai_fundamentals.jpg" alt="AI Fundamentals DataCamp Certificate" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
@@ -457,7 +463,7 @@
       <!-- Cert 3: Data Governance Fundamentals (July 18, 2026) -->
       <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_governance.jpg', 'Data Governance Fundamentals — DataCamp')">
-          <img src="certs/datacamp_governance.jpg" alt="Data Governance Fundamentals DataCamp Certificate">
+          <img src="certs/datacamp_governance.jpg" alt="Data Governance Fundamentals DataCamp Certificate" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
@@ -491,7 +497,7 @@
       <!-- Cert 4: Data Literacy Professional (July 15, 2026) -->
       <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_literacy.jpg', 'Data Literacy Professional — DataCamp')">
-          <img src="certs/datacamp_literacy.jpg" alt="Data Literacy Professional DataCamp Certificate">
+          <img src="certs/datacamp_literacy.jpg" alt="Data Literacy Professional DataCamp Certificate" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
@@ -525,7 +531,7 @@
       <!-- Cert 5: AI Fluency: Framework & Foundations (Anthropic) -->
       <div class="cert-card" data-cert-category="ai">
         <div class="cert-img-box" onclick="openCertImageModal('certs/anthropic_ai_fluency.jpg', 'AI Fluency: Framework & Foundations — Anthropic')">
-          <img src="certs/anthropic_ai_fluency.jpg" alt="AI Fluency Framework & Foundations Certificate">
+          <img src="certs/anthropic_ai_fluency.jpg" alt="AI Fluency Framework & Foundations Certificate" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
@@ -559,7 +565,7 @@
       <!-- Cert 6: Claude 101 (Anthropic) -->
       <div class="cert-card" data-cert-category="ai">
         <div class="cert-img-box" onclick="openCertImageModal('certs/anthropic_claude_101.jpg', 'Claude 101 — Anthropic')">
-          <img src="certs/anthropic_claude_101.jpg" alt="Claude 101 Anthropic Certificate">
+          <img src="certs/anthropic_claude_101.jpg" alt="Claude 101 Anthropic Certificate" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
@@ -593,7 +599,7 @@
       <!-- Cert 7: NAVTTC Data Analysis Using Python -->
       <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/navttc_python.jpg', 'Data Analysis Using Python — NAVTTC (Grade A+)')">
-          <img src="certs/navttc_python.jpg" alt="Data Analysis Using Python NAVTTC Certificate Grade A+">
+          <img src="certs/navttc_python.jpg" alt="Data Analysis Using Python NAVTTC Certificate Grade A+" loading="lazy" decoding="async">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
           </div>
