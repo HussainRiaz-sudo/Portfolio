@@ -667,6 +667,33 @@ body.light-mode .nav-link.active-glow {
   color: var(--accent-teal);
 }
 
+/* Special Emerald Pop-Out Tag Chips (Excel, SQL, Python) */
+.tag-btn-pop {
+  background: rgba(63, 185, 80, 0.16) !important;
+  color: var(--accent-teal) !important;
+  border: 1px solid rgba(63, 185, 80, 0.5) !important;
+  font-weight: 600 !important;
+  box-shadow: 0 0 10px rgba(63, 185, 80, 0.2);
+}
+.tag-btn-pop:hover, .tag-btn-pop.active {
+  background: var(--accent-teal) !important;
+  color: #0D1117 !important;
+  border-color: var(--accent-teal) !important;
+  box-shadow: 0 0 16px rgba(63, 185, 80, 0.55) !important;
+}
+
+body.light-mode .tag-btn-pop {
+  background: rgba(46, 160, 67, 0.14) !important;
+  color: #1a7f37 !important;
+  border-color: rgba(46, 160, 67, 0.55) !important;
+}
+body.light-mode .tag-btn-pop:hover, body.light-mode .tag-btn-pop.active {
+  background: #1a7f37 !important;
+  color: #FFFFFF !important;
+  border-color: #1a7f37 !important;
+  box-shadow: 0 0 14px rgba(46, 160, 67, 0.4) !important;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
