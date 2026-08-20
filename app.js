@@ -175,19 +175,6 @@ ML & Backend: Congregation timing prediction model is a Random Forest Regressor 
 My Role — Backend & Machine Learning Engineer: Astronomical baseline calculations, Random Forest model training, FastAPI microservice development, and AI chatbot design.`
   },
   {
-    id: 'scientific-calculator-8086',
-    title: 'Scientific Calculator | 8086 Assembly Language',
-    date: 'May 2026 – May 2026',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-microchip',
-    badge: 'University Project',
-    tech: ['Assembly Language', 'x86 Assembly', '8086 Registers', 'DOS Interrupts'],
-    hasRepoLink: false,
-    description: `Functional scientific calculator in 8086 Assembly Language running on EMU8086. Implemented 9 math operations using processor registers and DOS interrupts (INT 21h).`
-  },
-  {
     id: 'movie-recommender',
     title: 'Movie Recommender System (Data Science)',
     date: 'Nov 2025 – Nov 2025',
@@ -206,12 +193,12 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     date: 'May 2025 – Jun 2025',
     association: 'University of South Asia',
     origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-key',
-    badge: 'University Project • Competition Winner 🏆',
+    focus: ['techwar'],
+    icon: 'fa-trophy',
+    badge: 'TechWar 1st Place Winner 🏆',
     tech: ['Cybersecurity', 'AES-256', 'Product Pitching', 'Usability'],
     hasRepoLink: false,
-    description: `Locally stored credential manager with AES-256 encryption. Won 1st place in Cyber Security Idea Competition for product pitching and usability.`
+    description: `Locally stored credential manager with AES-256 encryption. Won 1st place in Cyber Security Idea Competition at TechWar for product pitching, security design, and usability.`
   },
   {
     id: 'todo-django-rest',
@@ -240,19 +227,6 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     description: `Authored a University Capstone Research Paper evaluating Deep Learning techniques for dermatological image classification. Explored Convolutional Neural Network (CNN) architectures and class-imbalance mitigation strategies for medical diagnostic imaging.`
   },
   {
-    id: 'flutter-news-app',
-    title: 'News App (Flutter)',
-    date: 'Mar 2025 – Apr 2025',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['web'],
-    icon: 'fa-newspaper',
-    badge: 'University Project',
-    tech: ['Flutter', 'Mobile Development', 'REST API', 'Dart'],
-    hasRepoLink: false,
-    description: `Cross-platform mobile news application built with Flutter featuring live news API integration and category browsing.`
-  },
-  {
     id: 'fashion-store-oracle',
     title: 'Fashion Store Database using Oracle',
     date: 'May 2024 – Jun 2024',
@@ -277,23 +251,6 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     tech: ['Machine Learning', 'Random Forest', 'Scikit-Learn', 'Feature Imputation', 'Pandas'],
     hasRepoLink: false,
     description: `Analyzed the Kaggle Titanic dataset (891 training records, 12 features). Preprocessed missing values via median (Age, Fare) and mode (Embarked) imputation, dropped non-predictive text features (Name, Ticket, Cabin), and one-hot encoded categorical variables. Trained a Random Forest Classifier (100 estimators, random_state=42) on an 80/20 train/validation split, achieving 0.81 (81%) validation accuracy.`
-  },
-  {
-    id: 'cpp-systems-foundations',
-    title: 'C++ Systems & OOP Foundations',
-    date: 'Jun 2023 – Jun 2024',
-    association: 'University of South Asia',
-    origin: 'university',
-    focus: ['systems'],
-    icon: 'fa-code',
-    badge: 'University Projects Suite',
-    tech: ['C++', 'Data Structures', 'OOP', 'Algorithms'],
-    hasRepoLink: false,
-    description: `Comprehensive suite of software engineering foundation projects built in C++ during Computer Science coursework:
-
-• Library Management System: Custom linked-list data structure for adding, searching, and managing catalog records.
-• E-License Verification System: Object-oriented architecture enforcing age-eligibility validation logic (18+).
-• Banking Transaction System: Simulating core financial account operations, deposits, withdrawals, and ledger balances.`
   }
 ];
 
