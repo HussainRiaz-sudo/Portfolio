@@ -148,7 +148,7 @@ const projectsData = [
     date: 'Jul 2026 – Aug 2026',
     association: 'Personal Project',
     origin: 'personal',
-    focus: ['web', 'sql'],
+    focus: ['web'],
     icon: 'fa-hospital-user',
     badge: 'Personal Project',
     tech: ['JavaScript', 'HTML5/CSS3', 'PIN Security', 'Chart.js', 'Google Sheets API', 'PDF Reports', 'Financial Analytics'],
