@@ -196,9 +196,12 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['techwar'],
     icon: 'fa-trophy',
     badge: 'TechWar 1st Place Winner 🏆',
-    tech: ['Cybersecurity', 'AES-256', 'Product Pitching', 'Usability'],
+    tech: ['Cybersecurity', 'AES-256', 'Zero-Knowledge Architecture', 'Product Pitching', 'Usability'],
     hasRepoLink: false,
-    description: `Locally stored credential manager with AES-256 encryption. Won 1st place in Cyber Security Idea Competition at TechWar for product pitching, security design, and usability.`
+    description: `Locally stored credential manager built with AES-256 encryption. Won 1st place in the Cyber Security Competition at TechWar for security architecture, live product pitching, and usability.
+
+Zero-Knowledge Security Architecture & Live Stage Defense:
+Engineered with strict Zero-Knowledge principles — no master backdoor keys or plaintext passwords are stored. During the live TechWar Q&A panel, when challenged on data unrecoverability if a user loses their vault password, successfully defended the architecture by establishing that zero-recovery is an intentional security design choice (eliminating backdoor vectors, analogous to Apple ID & Bitwarden end-to-end security standards), securing top marks for technical justification and executive presence.`
   },
   {
     id: 'todo-django-rest',
