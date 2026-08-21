@@ -357,8 +357,10 @@ function initProjectsHub() {
         });
       }
 
-      const btn = card.querySelector('.view-detail-btn');
-      btn.addEventListener('click', () => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a') || e.target.closest('.project-cover-box')) {
+          return;
+        }
         openModal({
           title: proj.title,
           date: proj.date,

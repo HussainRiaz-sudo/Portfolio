@@ -747,6 +747,7 @@ body.light-mode .tag-btn-gold:hover, body.light-mode .tag-btn-gold.active {
   flex-direction: column;
   justify-content: space-between;
   transition: var(--transition-smooth);
+  cursor: pointer;
 }
 .project-card:hover {
   border-color: var(--accent-teal);
