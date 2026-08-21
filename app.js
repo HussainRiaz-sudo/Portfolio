@@ -161,7 +161,7 @@ const projectsData = [
     ],
     tech: ['Excel', 'EDA', 'Data Cleaning', 'Pivot Tables', 'Feature Engineering', 'Customer Churn', 'Data Preparation'],
     hasRepoLink: true,
-    repoLink: 'https://github.com/HussainRiaz-sudo/Analyzing-Customer-Churn',
+    repoLink: 'https://github.com/HussainRiaz-sudo/Analyzing-Customer-Churn.',
     description: `Executed exploratory data analysis (EDA), data cleaning, and feature engineering on Databel's 6,687-customer telecom dataset in Microsoft Excel to uncover key drivers of customer attrition.
 
 Key Analytical Highlights & Insights:
