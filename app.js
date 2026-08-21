@@ -365,6 +365,8 @@ function initProjectsHub() {
           association: proj.association,
           tech: proj.tech,
           images: proj.images,
+          hasRepoLink: proj.hasRepoLink,
+          repoLink: proj.repoLink,
           description: proj.description
         });
       });
@@ -417,6 +419,14 @@ function openModal(data) {
     </div>
   ` : '';
 
+  const repoButtonHtml = data.hasRepoLink ? `
+    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); display: flex; justify-content: flex-end;">
+      <a href="${data.repoLink}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.25rem; background: var(--bg-dark); border: 1px solid var(--accent-teal); border-radius: var(--radius-md); color: var(--accent-teal); font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: var(--transition-smooth);">
+        <i class="fa-brands fa-github" style="font-size: 1.1rem;"></i> View Source Repository on GitHub <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+      </a>
+    </div>
+  ` : '';
+
   body.innerHTML = `
     <h2>${data.title}</h2>
     <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.85rem; margin-top: 0.25rem; margin-bottom: 0.5rem;">
@@ -429,6 +439,7 @@ function openModal(data) {
     <div style="color: var(--text-main); font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
       ${data.description}
     </div>
+    ${repoButtonHtml}
   `;
 
   body.querySelectorAll('.gallery-thumb-box').forEach(box => {
