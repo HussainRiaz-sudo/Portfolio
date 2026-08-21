@@ -288,18 +288,15 @@ i.fa-solid, i.fa-brands, i.fa-regular, .fa-solid, .fa-brands, .fa-regular {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  min-height: 4.2rem;
+  min-height: 4rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.hero-role-display span#typing-role {
+.hero-role-display span {
   color: var(--accent-teal);
   font-family: var(--font-code);
   margin-left: 0.5rem;
-  display: inline-block;
-  min-width: 220px;
-  vertical-align: bottom;
 }
 
 .hero-tagline {
