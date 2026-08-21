@@ -275,20 +275,31 @@ body.light-mode .nav-link.active-glow {
   100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0); }
 }
 
+/* Prevent FontAwesome FOUT Layout Shift (CLS optimization) */
+i.fa-solid, i.fa-brands, i.fa-regular, .fa-solid, .fa-brands, .fa-regular {
+  display: inline-block;
+  min-width: 1em;
+  text-align: center;
+  line-height: 1;
+}
+
 .hero-role-display {
   font-size: 2.75rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
-  min-height: 4rem;
+  min-height: 4.2rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-.hero-role-display span {
+.hero-role-display span#typing-role {
   color: var(--accent-teal);
   font-family: var(--font-code);
   margin-left: 0.5rem;
+  display: inline-block;
+  min-width: 220px;
+  vertical-align: bottom;
 }
 
 .hero-tagline {
@@ -579,6 +590,8 @@ body.light-mode .nav-link.active-glow {
   position: relative;
   width: 100%;
   height: 200px;
+  min-height: 200px;
+  aspect-ratio: 16 / 9;
   background: var(--bg-dark);
   overflow: hidden;
   border-bottom: 1px solid var(--border-color);
