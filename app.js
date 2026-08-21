@@ -497,6 +497,7 @@ function renderGalleryModal() {
   if (hasMultiple) {
     const prevBtn = body.querySelector('#lightbox-prev-btn');
     const nextBtn = body.querySelector('#lightbox-next-btn');
+    const imgWrapper = body.querySelector('.lightbox-img-wrapper');
 
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
@@ -510,28 +511,34 @@ function renderGalleryModal() {
         stepGallery(1);
       });
     }
-    triggerBadgeFadeOut();
+    if (imgWrapper) {
+      imgWrapper.addEventListener('mousemove', () => {
+        triggerControlsFadeOut();
+      });
+    }
+    triggerControlsFadeOut();
   }
 }
 
-let badgeTimeoutId = null;
+let controlsTimeoutId = null;
 
-function triggerBadgeFadeOut() {
+function triggerControlsFadeOut() {
   const counterEl = document.getElementById('lightbox-counter');
-  if (!counterEl) return;
+  const navBtns = document.querySelectorAll('.lightbox-nav-btn');
 
-  counterEl.classList.remove('fade-out');
+  if (counterEl) counterEl.classList.remove('fade-out');
+  navBtns.forEach(btn => btn.classList.remove('fade-out'));
 
-  if (badgeTimeoutId) {
-    clearTimeout(badgeTimeoutId);
+  if (controlsTimeoutId) {
+    clearTimeout(controlsTimeoutId);
   }
 
-  badgeTimeoutId = setTimeout(() => {
+  controlsTimeoutId = setTimeout(() => {
     const el = document.getElementById('lightbox-counter');
-    if (el) {
-      el.classList.add('fade-out');
-    }
-  }, 2200);
+    const btns = document.querySelectorAll('.lightbox-nav-btn');
+    if (el) el.classList.add('fade-out');
+    btns.forEach(btn => btn.classList.add('fade-out'));
+  }, 1500);
 }
 
 function stepGallery(dir) {
@@ -547,7 +554,7 @@ function stepGallery(dir) {
   if (counterEl) {
     counterEl.textContent = `Sheet ${currentGalleryIndex + 1} of ${currentGalleryList.length}`;
   }
-  triggerBadgeFadeOut();
+  triggerControlsFadeOut();
 }
 
 function initModalLogic() {
