@@ -313,7 +313,7 @@ function initProjectsHub() {
       card.className = 'project-card';
 
       const imgBoxHtml = proj.image ? `
-        <div class="cert-img-box" style="margin-bottom: 1rem; border-radius: var(--radius-sm); height: 160px; overflow: hidden; position: relative;" onclick="openCertImageModal('${proj.image}', '${proj.title} — Dashboard Overview')">
+        <div class="cert-img-box project-cover-box" style="margin-bottom: 1rem; border-radius: var(--radius-sm); height: 160px; overflow: hidden; position: relative; cursor: pointer;">
           <img src="${proj.image}" alt="${proj.title}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
           <div class="cert-img-overlay">
             <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Dashboard Visuals
@@ -347,6 +347,14 @@ function initProjectsHub() {
           ` : `<span style="font-size: 0.78rem; color: var(--text-dim); font-style: italic;"><i class="fa-solid fa-lock" style="font-size: 0.7rem;"></i> Code on Request</span>`}
         </div>
       `;
+
+      const coverBox = card.querySelector('.project-cover-box');
+      if (coverBox) {
+        coverBox.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openCertImageModal(proj.image, `${proj.title} — Dashboard Overview`);
+        });
+      }
 
       const btn = card.querySelector('.view-detail-btn');
       btn.addEventListener('click', () => {
@@ -397,7 +405,7 @@ function openModal(data) {
       </h4>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.65rem;">
         ${data.images.map((img, idx) => `
-          <div class="cert-img-box" style="border-radius: var(--radius-sm); height: 90px; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;" onclick="openCertImageModal('${img}', '${data.title} — Dashboard Sheet ${idx + 1}')">
+          <div class="cert-img-box gallery-thumb-box" data-img-src="${img}" data-idx="${idx + 1}" style="border-radius: var(--radius-sm); height: 90px; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
             <img src="${img}" alt="Dashboard Sheet ${idx + 1}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
             <div class="cert-img-overlay" style="font-size: 0.75rem;">
               <i class="fa-solid fa-expand"></i> Sheet ${idx + 1}
@@ -421,6 +429,15 @@ function openModal(data) {
       ${data.description}
     </div>
   `;
+
+  body.querySelectorAll('.gallery-thumb-box').forEach(box => {
+    box.addEventListener('click', () => {
+      const src = box.getAttribute('data-img-src');
+      const idx = box.getAttribute('data-idx');
+      openCertImageModal(src, `${data.title} — Dashboard Sheet ${idx}`);
+    });
+  });
+
   modal.classList.add('active');
 }
 
