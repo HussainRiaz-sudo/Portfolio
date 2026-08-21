@@ -143,6 +143,34 @@ function initRoleTyping() {
 /* Projects Catalog with Verified Slide Presentation Data */
 const projectsData = [
   {
+    id: 'databel-churn-excel',
+    title: 'Databel Customer Churn EDA & Data Preparation',
+    date: 'Aug 2026 – Aug 2026',
+    association: 'Personal Project',
+    origin: 'personal',
+    focus: ['excel'],
+    icon: 'fa-file-excel',
+    badge: 'Excel Data Analytics',
+    image: 'assets/excel_churn/churn_dashboard_1.jpg',
+    images: [
+      'assets/excel_churn/churn_dashboard_1.jpg',
+      'assets/excel_churn/churn_dashboard_2.jpg',
+      'assets/excel_churn/churn_dashboard_3.jpg',
+      'assets/excel_churn/churn_dashboard_4.jpg',
+      'assets/excel_churn/churn_dashboard_5.jpg'
+    ],
+    tech: ['Excel', 'EDA', 'Data Cleaning', 'Pivot Tables', 'Feature Engineering', 'Customer Churn', 'Data Preparation'],
+    hasRepoLink: true,
+    repoLink: 'https://github.com/HussainRiaz-sudo/Analyzing-Customer-Churn',
+    description: `Executed exploratory data analysis (EDA), data cleaning, and feature engineering on Databel's 6,687-customer telecom dataset in Microsoft Excel to uncover key drivers of customer attrition.
+
+Key Analytical Highlights & Insights:
+• Baseline Metrics: Identified a 26.86% baseline churn rate across 6,687 accounts (1,796 churned customers).
+• Risk Segmentation: Discovered Month-to-Month contract holders suffer from a 46.29% churn rate compared to just 2.78% for 2-Year contract holders.
+• Primary Churn Drivers: Isolated Competitor Offers & Device Promotions as the #1 churn catalyst (accounting for ~45% of total churned accounts).
+• Feature Engineering & Pivoting: Created demographic flags (Senior / Under 30), numeric churn indicators, consumption groupings, and pivot tables to aggregate support call frequencies and extra charges.`
+  },
+  {
     id: 'patient-tracker-js',
     title: 'Patient-Tracker Workflow Application',
     date: 'Jul 2026 – Aug 2026',
@@ -283,6 +311,16 @@ function initProjectsHub() {
     filtered.forEach(proj => {
       const card = document.createElement('div');
       card.className = 'project-card';
+
+      const imgBoxHtml = proj.image ? `
+        <div class="cert-img-box" style="margin-bottom: 1rem; border-radius: var(--radius-sm); height: 160px; overflow: hidden; position: relative;" onclick="openCertImageModal('${proj.image}', '${proj.title} — Dashboard Overview')">
+          <img src="${proj.image}" alt="${proj.title}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Dashboard Visuals
+          </div>
+        </div>
+      ` : '';
+
       card.innerHTML = `
         <div>
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.85rem;">
@@ -293,6 +331,7 @@ function initProjectsHub() {
             <i class="fa-regular fa-calendar"></i> ${proj.date}
           </div>
           <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.85rem;">${proj.title}</h3>
+          ${imgBoxHtml}
           <div style="display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
             ${proj.tech.map(t => `<span class="badge-tag">#${t}</span>`).join('')}
           </div>
@@ -316,6 +355,7 @@ function initProjectsHub() {
           date: proj.date,
           association: proj.association,
           tech: proj.tech,
+          images: proj.images,
           description: proj.description
         });
       });
@@ -350,14 +390,33 @@ function openModal(data) {
   const body = document.getElementById('modal-article-body');
   if (!modal || !body) return;
 
+  const galleryHtml = data.images && data.images.length ? `
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--accent-teal); margin-bottom: 0.75rem;">
+        <i class="fa-solid fa-chart-column"></i> Interactive Dashboard Sheets (${data.images.length} Views)
+      </h4>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.65rem;">
+        ${data.images.map((img, idx) => `
+          <div class="cert-img-box" style="border-radius: var(--radius-sm); height: 90px; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;" onclick="openCertImageModal('${img}', '${data.title} — Dashboard Sheet ${idx + 1}')">
+            <img src="${img}" alt="Dashboard Sheet ${idx + 1}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
+            <div class="cert-img-overlay" style="font-size: 0.75rem;">
+              <i class="fa-solid fa-expand"></i> Sheet ${idx + 1}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
   body.innerHTML = `
     <h2>${data.title}</h2>
     <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.85rem; margin-top: 0.25rem; margin-bottom: 0.5rem;">
       📅 ${data.date} • ${data.association}
     </p>
-    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+    <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1.25rem;">
       ${data.tech.map(t => `<span class="badge-tag">#${t}</span>`).join('')}
     </div>
+    ${galleryHtml}
     <div style="color: var(--text-main); font-size: 0.95rem; line-height: 1.8; white-space: pre-line;">
       ${data.description}
     </div>
