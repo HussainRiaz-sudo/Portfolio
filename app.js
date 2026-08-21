@@ -352,7 +352,8 @@ function initProjectsHub() {
       if (coverBox) {
         coverBox.addEventListener('click', (e) => {
           e.stopPropagation();
-          openCertImageModal(proj.image, `${proj.title} — Dashboard Overview`);
+          const imgInput = (proj.images && proj.images.length) ? proj.images : proj.image;
+          openCertImageModal(imgInput, `${proj.title} — Dashboard Overview`, 0);
         });
       }
 
@@ -401,9 +402,9 @@ function openModal(data) {
   const galleryHtml = data.images && data.images.length ? `
     <div style="margin-bottom: 1.5rem;">
       <h4 style="font-size: 0.92rem; font-weight: 700; color: var(--accent-teal); margin-bottom: 0.75rem;">
-        <i class="fa-solid fa-chart-column"></i> Interactive Dashboard Sheets (${data.images.length} Views)
+        <i class="fa-solid fa-chart-column"></i> Interactive Dashboard Sheets (${data.images.length} Views — Click sheet or use arrows)
       </h4>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.65rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.65rem;">
         ${data.images.map((img, idx) => `
           <div class="cert-img-box gallery-thumb-box" data-img-src="${img}" data-idx="${idx + 1}" style="border-radius: var(--radius-sm); height: 90px; overflow: hidden; border: 1px solid var(--border-color); cursor: pointer;">
             <img src="${img}" alt="Dashboard Sheet ${idx + 1}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover;">
@@ -432,28 +433,99 @@ function openModal(data) {
 
   body.querySelectorAll('.gallery-thumb-box').forEach(box => {
     box.addEventListener('click', () => {
-      const src = box.getAttribute('data-img-src');
-      const idx = box.getAttribute('data-idx');
-      openCertImageModal(src, `${data.title} — Dashboard Sheet ${idx}`);
+      const idx = parseInt(box.getAttribute('data-idx')) - 1;
+      openCertImageModal(data.images, `${data.title} — Dashboard Sheets`, idx);
     });
   });
 
   modal.classList.add('active');
 }
 
-function openCertImageModal(imagePath, title) {
+let currentGalleryList = [];
+let currentGalleryIndex = 0;
+let currentGalleryTitle = '';
+
+function openCertImageModal(imageInput, title, initialIndex = 0) {
   const modal = document.getElementById('article-modal');
   const body = document.getElementById('modal-article-body');
   if (!modal || !body) return;
 
+  if (Array.isArray(imageInput)) {
+    currentGalleryList = imageInput;
+  } else {
+    currentGalleryList = [imageInput];
+  }
+
+  currentGalleryIndex = (initialIndex >= 0 && initialIndex < currentGalleryList.length) ? initialIndex : 0;
+  currentGalleryTitle = title || 'Image Viewer';
+
+  renderGalleryModal();
+  modal.classList.add('active');
+}
+
+function renderGalleryModal() {
+  const body = document.getElementById('modal-article-body');
+  if (!body) return;
+
+  const total = currentGalleryList.length;
+  const currentImg = currentGalleryList[currentGalleryIndex];
+  const hasMultiple = total > 1;
+
+  const navControlsHtml = hasMultiple ? `
+    <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev-btn" title="Previous Image (Left Arrow)">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button type="button" class="lightbox-nav-btn next" id="lightbox-next-btn" title="Next Image (Right Arrow)">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-counter-badge" id="lightbox-counter">
+      Sheet ${currentGalleryIndex + 1} of ${total}
+    </div>
+  ` : '';
+
   body.innerHTML = `
-    <h2>${title}</h2>
-    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.25rem;">Click anywhere outside to close the viewer.</p>
-    <div style="width: 100%; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-dark);">
-      <img src="${imagePath}" alt="${title}" style="width: 100%; height: auto; display: block;" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop';">
+    <h2>${currentGalleryTitle}</h2>
+    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.25rem;">
+      ${hasMultiple ? 'Use the left/right arrow buttons or keyboard arrow keys to switch images.' : 'Click anywhere outside to close the viewer.'}
+    </p>
+    <div class="lightbox-img-wrapper">
+      ${navControlsHtml}
+      <img id="lightbox-active-img" src="${currentImg}" alt="${currentGalleryTitle}" style="width: 100%; height: auto; max-height: 72vh; object-fit: contain; display: block;" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop';">
     </div>
   `;
-  modal.classList.add('active');
+
+  if (hasMultiple) {
+    const prevBtn = body.querySelector('#lightbox-prev-btn');
+    const nextBtn = body.querySelector('#lightbox-next-btn');
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        stepGallery(-1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        stepGallery(1);
+      });
+    }
+  }
+}
+
+function stepGallery(dir) {
+  if (!currentGalleryList.length) return;
+  currentGalleryIndex = (currentGalleryIndex + dir + currentGalleryList.length) % currentGalleryList.length;
+  
+  const imgEl = document.getElementById('lightbox-active-img');
+  const counterEl = document.getElementById('lightbox-counter');
+  
+  if (imgEl) {
+    imgEl.src = currentGalleryList[currentGalleryIndex];
+  }
+  if (counterEl) {
+    counterEl.textContent = `Sheet ${currentGalleryIndex + 1} of ${currentGalleryList.length}`;
+  }
 }
 
 function initModalLogic() {
@@ -464,6 +536,17 @@ function initModalLogic() {
   closeBtn.addEventListener('click', () => modal.classList.remove('active'));
   modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.classList.remove('active');
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('active')) return;
+    if (e.key === 'ArrowRight') {
+      stepGallery(1);
+    } else if (e.key === 'ArrowLeft') {
+      stepGallery(-1);
+    } else if (e.key === 'Escape') {
+      modal.classList.remove('active');
+    }
   });
 }
 
