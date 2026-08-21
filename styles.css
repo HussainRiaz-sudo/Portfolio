@@ -926,6 +926,12 @@ body.light-mode .tag-btn-gold:hover, body.light-mode .tag-btn-gold.active {
   font-weight: 600;
   font-family: var(--font-code);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+}
+.lightbox-counter-badge.fade-out {
+  opacity: 0;
 }
 
 /* Responsive Mobile & Tablet Adjustments (< 768px) */

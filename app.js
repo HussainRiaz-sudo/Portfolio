@@ -510,7 +510,28 @@ function renderGalleryModal() {
         stepGallery(1);
       });
     }
+    triggerBadgeFadeOut();
   }
+}
+
+let badgeTimeoutId = null;
+
+function triggerBadgeFadeOut() {
+  const counterEl = document.getElementById('lightbox-counter');
+  if (!counterEl) return;
+
+  counterEl.classList.remove('fade-out');
+
+  if (badgeTimeoutId) {
+    clearTimeout(badgeTimeoutId);
+  }
+
+  badgeTimeoutId = setTimeout(() => {
+    const el = document.getElementById('lightbox-counter');
+    if (el) {
+      el.classList.add('fade-out');
+    }
+  }, 2200);
 }
 
 function stepGallery(dir) {
@@ -526,6 +547,7 @@ function stepGallery(dir) {
   if (counterEl) {
     counterEl.textContent = `Sheet ${currentGalleryIndex + 1} of ${currentGalleryList.length}`;
   }
+  triggerBadgeFadeOut();
 }
 
 function initModalLogic() {
