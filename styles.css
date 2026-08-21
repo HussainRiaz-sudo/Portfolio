@@ -878,42 +878,38 @@ body.light-mode .tag-btn-gold:hover, body.light-mode .tag-btn-gold.active {
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 44px;
-  height: 44px;
-  background: rgba(13, 17, 23, 0.82);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  width: 32px;
+  height: 32px;
+  background: rgba(13, 17, 23, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--border-color);
   color: var(--text-main);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   cursor: pointer;
-  opacity: 1;
-  transition: opacity 0.4s ease-in-out, transform 0.25s ease-in-out, background 0.25s ease-in-out;
-}
-
-.lightbox-nav-btn.fade-out {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0.85;
+  transition: all 0.2s ease-in-out;
 }
 
 .lightbox-nav-btn:hover {
+  opacity: 1;
   background: var(--accent-teal);
   color: #0D1117;
   border-color: var(--accent-teal);
-  box-shadow: 0 0 14px rgba(63, 185, 80, 0.5);
-  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 0 10px rgba(63, 185, 80, 0.5);
+  transform: translateY(-50%) scale(1.1);
 }
 
 .lightbox-nav-btn.prev {
-  left: 0.85rem;
+  left: 0.4rem;
 }
 
 .lightbox-nav-btn.next {
-  right: 0.85rem;
+  right: 0.4rem;
 }
 
 .lightbox-counter-badge {

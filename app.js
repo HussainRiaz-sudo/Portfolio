@@ -513,31 +513,28 @@ function renderGalleryModal() {
     }
     if (imgWrapper) {
       imgWrapper.addEventListener('mousemove', () => {
-        triggerControlsFadeOut();
+        triggerBadgeFadeOut();
       });
     }
-    triggerControlsFadeOut();
+    triggerBadgeFadeOut();
   }
 }
 
-let controlsTimeoutId = null;
+let badgeTimeoutId = null;
 
-function triggerControlsFadeOut() {
+function triggerBadgeFadeOut() {
   const counterEl = document.getElementById('lightbox-counter');
-  const navBtns = document.querySelectorAll('.lightbox-nav-btn');
+  if (!counterEl) return;
 
-  if (counterEl) counterEl.classList.remove('fade-out');
-  navBtns.forEach(btn => btn.classList.remove('fade-out'));
+  counterEl.classList.remove('fade-out');
 
-  if (controlsTimeoutId) {
-    clearTimeout(controlsTimeoutId);
+  if (badgeTimeoutId) {
+    clearTimeout(badgeTimeoutId);
   }
 
-  controlsTimeoutId = setTimeout(() => {
+  badgeTimeoutId = setTimeout(() => {
     const el = document.getElementById('lightbox-counter');
-    const btns = document.querySelectorAll('.lightbox-nav-btn');
     if (el) el.classList.add('fade-out');
-    btns.forEach(btn => btn.classList.add('fade-out'));
   }, 1500);
 }
 
@@ -554,7 +551,7 @@ function stepGallery(dir) {
   if (counterEl) {
     counterEl.textContent = `Sheet ${currentGalleryIndex + 1} of ${currentGalleryList.length}`;
   }
-  triggerControlsFadeOut();
+  triggerBadgeFadeOut();
 }
 
 function initModalLogic() {
