@@ -40,12 +40,12 @@
       <span id="brand-name-typing">Muhammad Hussain Riaz</span><span class="brand-cursor">|</span>
     </div>
     <ul class="nav-links">
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#experience" class="nav-link">Experience</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#certifications" class="nav-link">Certifications</a></li>
-      <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
       <li>
         <a href="assets/Muhammad%20Hussain%20Riaz-%20Associate%20Data%20Analyst.pdf" download="Muhammad Hussain Riaz- Associate Data Analyst.pdf" target="_blank" class="nav-link" style="color: var(--accent-teal); font-weight: 600;">
           <i class="fa-solid fa-file-arrow-down"></i> Resume
@@ -117,44 +117,121 @@
     </div>
   </header>
 
-  <!-- Projects Section with Reorganized Filters -->
-  <section class="section-container" id="projects">
+  <!-- About Section -->
+  <section class="section-container" id="about">
     <div class="section-badge">
-      <i class="fa-solid fa-folder-closed"></i> PROJECT PORTFOLIO
+      <i class="fa-solid fa-seedling"></i> THE ANALYST MINDSET
     </div>
     <div class="section-header">
-      <h2 class="section-title">Projects & Engineering Catalog</h2>
-      <p class="section-subtitle">Sub-divided by focus area and project origin.</p>
+      <h2 class="section-title">Computer Science Foundations & Analytical Drive</h2>
     </div>
 
-    <!-- Dual-Layer Sub-Divided Filters -->
-    <div class="filter-bar">
-      <div class="filter-row">
-        <span class="filter-label">Focus:</span>
-        <div class="project-focus-chips">
-          <button class="tag-btn active" data-focus="all">All Focus Areas</button>
-          <button class="tag-btn tag-btn-pop" data-focus="excel"><i class="fa-solid fa-file-excel"></i> Excel</button>
-          <button class="tag-btn tag-btn-pop" data-focus="sql"><i class="fa-solid fa-database"></i> SQL</button>
-          <button class="tag-btn tag-btn-pop" data-focus="python"><i class="fa-brands fa-python"></i> Python</button>
-          <button class="tag-btn tag-btn-gold" data-focus="techwar"><i class="fa-solid fa-trophy"></i> TechWar Winner</button>
-          <button class="tag-btn" data-focus="ml_ai">Machine Learning & AI</button>
-          <button class="tag-btn" data-focus="web">Web & Mobile Apps</button>
+    <div class="about-grid">
+      <div class="about-card">
+        <div style="display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1rem;">
+          <div class="profile-avatar-frame" title="Click to view full portrait photo">
+            <img src="assets/hussain_profile.jpg" alt="Muhammad Hussain Riaz" class="profile-avatar-img" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem;"><i class="fa-solid fa-compass" style="color: var(--accent-teal);"></i> Curiosity Beyond Spreadsheets</h3>
+            <span style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.83rem; font-weight: 500;">Muhammad Hussain Riaz</span>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+          I'm genuinely curious about data—not just technically, but about what it's actually saying. Why does this number look off? What's the trend beneath the surface telling us? That kind of thinking is what pulled me toward analytics and keeps me in it.
+        </p>
+        <div class="quote-banner">
+          "I'm a strong communicator and organized, and I write regularly. When the time comes, I don't just analyze data; I explain it clearly to people who don't live in spreadsheets."
         </div>
       </div>
 
-      <div class="filter-row">
-        <span class="filter-label">Origin:</span>
-        <div class="project-origin-chips">
-          <button class="tag-btn active" data-origin="all">All Sources</button>
-          <button class="tag-btn" data-origin="university">University Projects (8)</button>
-          <button class="tag-btn" data-origin="personal">Personal Projects (1)</button>
+      <div class="mindset-list">
+        <div class="mindset-item">
+          <div class="mindset-icon-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1rem;">Probing Beneath Surface Metrics</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Asking "Why" to uncover root trends rather than stopping at default counts.</p>
+          </div>
+        </div>
+
+        <div class="mindset-item">
+          <div class="mindset-icon-box">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1rem;">Collaborative & Explainer Mindset</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Working seamlessly in teams and communicating data insights with humor and clarity.</p>
+          </div>
+        </div>
+
+        <div class="mindset-item">
+          <div class="mindset-icon-box">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h4 style="font-size: 1rem;">Data Integrity & Audit</h4>
+            <p style="color: var(--text-muted); font-size: 0.88rem;">Auditing raw datasets and designing relational schemas before drawing conclusions.</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Dynamic Projects Grid -->
-    <div class="projects-grid" id="projects-grid">
-      <!-- Injected dynamically via app.js -->
+  <div class="border-divider"></div>
+
+  <!-- Technical Skills Section -->
+  <section class="section-container" id="skills">
+    <div class="section-badge">
+      <i class="fa-solid fa-sliders"></i> SKILLS & COMPETENCIES
+    </div>
+    <div class="section-header">
+      <h2 class="section-title">Technical Toolkit & Core Skills</h2>
+      <p class="section-subtitle">Curated proficiencies in data analysis, BI, AI frameworks, database engineering, and leadership.</p>
+    </div>
+
+    <div class="skills-category-grid">
+      <!-- Category 1: Languages & Tools -->
+      <div class="skills-category-card">
+        <div class="skills-category-title">
+          <i class="fa-solid fa-code"></i> Languages & Tools
+        </div>
+        <div class="skill-pills-wrap">
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Pandas</span>
+        </div>
+      </div>
+
+      <!-- Category 2: Analytics & BI -->
+      <div class="skills-category-card">
+        <div class="skills-category-title">
+          <i class="fa-solid fa-chart-pie"></i> Analytics & BI
+        </div>
+        <div class="skill-pills-wrap">
+          <span class="skill-pill">Data Analysis</span>
+          <span class="skill-pill">Business Intelligence</span>
+          <span class="skill-pill">Excel</span>
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">Database Design</span>
+        </div>
+      </div>
+
+      <!-- Category 3: Soft Skills -->
+      <div class="skills-category-card">
+        <div class="skills-category-title">
+          <i class="fa-solid fa-brain"></i> Soft Skills
+        </div>
+        <div class="skill-pills-wrap">
+          <span class="skill-pill">Analytical Thinking</span>
+          <span class="skill-pill">Communication</span>
+          <span class="skill-pill">Team Leadership</span>
+          <span class="skill-pill">Problem Solving</span>
+          <span class="skill-pill">Attention to Detail</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -230,55 +307,119 @@
 
   <div class="border-divider"></div>
 
-  <!-- Technical Skills Section -->
-  <section class="section-container" id="skills">
+  <!-- Projects Section with Reorganized Filters -->
+  <section class="section-container" id="projects">
     <div class="section-badge">
-      <i class="fa-solid fa-sliders"></i> SKILLS & COMPETENCIES
+      <i class="fa-solid fa-folder-closed"></i> PROJECT PORTFOLIO
     </div>
     <div class="section-header">
-      <h2 class="section-title">Technical Toolkit & Core Skills</h2>
-      <p class="section-subtitle">Curated proficiencies in data analysis, BI, AI frameworks, database engineering, and leadership.</p>
+      <h2 class="section-title">Projects & Engineering Catalog</h2>
+      <p class="section-subtitle">Sub-divided by focus area and project origin.</p>
     </div>
 
-    <div class="skills-category-grid">
-      <!-- Category 1: Languages & Tools -->
-      <div class="skills-category-card">
-        <div class="skills-category-title">
-          <i class="fa-solid fa-code"></i> Languages & Tools
-        </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">NumPy</span>
-          <span class="skill-pill">Pandas</span>
-        </div>
-      </div>
-
-      <!-- Category 2: Analytics & BI -->
-      <div class="skills-category-card">
-        <div class="skills-category-title">
-          <i class="fa-solid fa-chart-pie"></i> Analytics & BI
-        </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">Data Analysis</span>
-          <span class="skill-pill">Business Intelligence</span>
-          <span class="skill-pill">Excel</span>
-          <span class="skill-pill">Machine Learning</span>
-          <span class="skill-pill">Database Design</span>
+    <!-- Dual-Layer Sub-Divided Filters -->
+    <div class="filter-bar">
+      <div class="filter-row">
+        <span class="filter-label">Focus:</span>
+        <div class="project-focus-chips">
+          <button class="tag-btn active" data-focus="all">All Focus Areas</button>
+          <button class="tag-btn tag-btn-pop" data-focus="excel"><i class="fa-solid fa-file-excel"></i> Excel</button>
+          <button class="tag-btn tag-btn-pop" data-focus="sql"><i class="fa-solid fa-database"></i> SQL</button>
+          <button class="tag-btn tag-btn-pop" data-focus="python"><i class="fa-brands fa-python"></i> Python</button>
+          <button class="tag-btn tag-btn-gold" data-focus="techwar"><i class="fa-solid fa-trophy"></i> TechWar Winner</button>
+          <button class="tag-btn" data-focus="ml_ai">Machine Learning & AI</button>
+          <button class="tag-btn" data-focus="web">Web & Mobile Apps</button>
         </div>
       </div>
 
-      <!-- Category 3: Soft Skills -->
-      <div class="skills-category-card">
-        <div class="skills-category-title">
-          <i class="fa-solid fa-brain"></i> Soft Skills
+      <div class="filter-row">
+        <span class="filter-label">Origin:</span>
+        <div class="project-origin-chips">
+          <button class="tag-btn active" data-origin="all">All Sources</button>
+          <button class="tag-btn" data-origin="university">University Projects (8)</button>
+          <button class="tag-btn" data-origin="personal">Personal Projects (1)</button>
         </div>
-        <div class="skill-pills-wrap">
-          <span class="skill-pill">Analytical Thinking</span>
-          <span class="skill-pill">Communication</span>
-          <span class="skill-pill">Team Leadership</span>
-          <span class="skill-pill">Problem Solving</span>
-          <span class="skill-pill">Attention to Detail</span>
+      </div>
+    </div>
+
+    <!-- Dynamic Projects Grid -->
+    <div class="projects-grid" id="projects-grid">
+      <!-- Injected dynamically via app.js -->
+    </div>
+  </section>
+
+  <div class="border-divider"></div>
+
+  <!-- Education Section -->
+  <section class="section-container" id="education">
+    <div class="section-badge">
+      <i class="fa-solid fa-graduation-cap"></i> EDUCATION
+    </div>
+    <div class="section-header">
+      <h2 class="section-title">Academic Background</h2>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <!-- Education 1: BS CS (Latest: Sep 2022 – Jul 2026) -->
+      <div class="education-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div>
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main);">Bachelor of Science in Computer Science</h3>
+            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
+              University of South Asia
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+              <i class="fa-regular fa-calendar"></i> Sep 2022 – Jul 2026
+            </span>
+            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
+              Grade: B
+            </span>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+          Four years of computer science gave me a strong foundation in programming, algorithms, and analytical thinking.
+        </p>
+      </div>
+
+      <!-- Education 2: Intermediate ICS (2020 – 2022) -->
+      <div class="education-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main);">Intermediate with Computer Science (ICS)</h3>
+            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
+              Unique Group of Institutions
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+              <i class="fa-regular fa-calendar"></i> 2020 – 2022
+            </span>
+            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
+              Grade: A
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education 3: Matriculation (2006 – 2020) -->
+      <div class="education-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main);">Matriculation with Computer Science</h3>
+            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
+              Dar-e-Arqam Schools
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
+            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
+              <i class="fa-regular fa-calendar"></i> 2006 – 2020
+            </span>
+            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
+              Grade: A+
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -577,147 +718,6 @@
             <span class="badge-tag" style="background: rgba(88, 166, 255, 0.15); color: var(--accent-blue); font-size: 0.78rem; font-weight: 600;">
               Grade A+ Verified
             </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="border-divider"></div>
-
-  <!-- Education Section -->
-  <section class="section-container" id="education">
-    <div class="section-badge">
-      <i class="fa-solid fa-graduation-cap"></i> EDUCATION
-    </div>
-    <div class="section-header">
-      <h2 class="section-title">Academic Background</h2>
-    </div>
-
-    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-      <!-- Education 1: BS CS (Latest: Sep 2022 – Jul 2026) -->
-      <div class="education-card">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
-          <div>
-            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main);">Bachelor of Science in Computer Science</h3>
-            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
-              University of South Asia
-            </p>
-          </div>
-          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
-            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
-              <i class="fa-regular fa-calendar"></i> Sep 2022 – Jul 2026
-            </span>
-            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
-              Grade: B
-            </span>
-          </div>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
-          Four years of computer science gave me a strong foundation in programming, algorithms, and analytical thinking.
-        </p>
-      </div>
-
-      <!-- Education 2: Intermediate ICS (2020 – 2022) -->
-      <div class="education-card">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
-          <div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main);">Intermediate with Computer Science (ICS)</h3>
-            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
-              Unique Group of Institutions
-            </p>
-          </div>
-          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
-            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
-              <i class="fa-regular fa-calendar"></i> 2020 – 2022
-            </span>
-            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
-              Grade: A
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Education 3: Matriculation (2006 – 2020) -->
-      <div class="education-card">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;">
-          <div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-main);">Matriculation with Computer Science</h3>
-            <p style="color: var(--accent-teal); font-family: var(--font-code); font-weight: 600; font-size: 0.95rem; margin-top: 0.2rem;">
-              Dar-e-Arqam Schools
-            </p>
-          </div>
-          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.35rem;">
-            <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold); font-size: 0.85rem; padding: 0.3rem 0.75rem;">
-              <i class="fa-regular fa-calendar"></i> 2006 – 2020
-            </span>
-            <span class="badge-tag" style="background: rgba(63, 185, 80, 0.15); color: var(--accent-teal); font-size: 0.82rem; padding: 0.25rem 0.65rem;">
-              Grade: A+
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="border-divider"></div>
-
-  <!-- About Section -->
-  <section class="section-container" id="about">
-    <div class="section-badge">
-      <i class="fa-solid fa-seedling"></i> THE ANALYST MINDSET
-    </div>
-    <div class="section-header">
-      <h2 class="section-title">Computer Science Foundations & Analytical Drive</h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-card">
-        <div style="display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1rem;">
-          <div class="profile-avatar-frame" title="Click to view full portrait photo">
-            <img src="assets/hussain_profile.jpg" alt="Muhammad Hussain Riaz" class="profile-avatar-img" loading="lazy" decoding="async">
-          </div>
-          <div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.2rem;"><i class="fa-solid fa-compass" style="color: var(--accent-teal);"></i> Curiosity Beyond Spreadsheets</h3>
-            <span style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.83rem; font-weight: 500;">Muhammad Hussain Riaz</span>
-          </div>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
-          I'm genuinely curious about data—not just technically, but about what it's actually saying. Why does this number look off? What's the trend beneath the surface telling us? That kind of thinking is what pulled me toward analytics and keeps me in it.
-        </p>
-        <div class="quote-banner">
-          "I'm a strong communicator and organized, and I write regularly. When the time comes, I don't just analyze data; I explain it clearly to people who don't live in spreadsheets."
-        </div>
-      </div>
-
-      <div class="mindset-list">
-        <div class="mindset-item">
-          <div class="mindset-icon-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 1rem;">Probing Beneath Surface Metrics</h4>
-            <p style="color: var(--text-muted); font-size: 0.88rem;">Asking "Why" to uncover root trends rather than stopping at default counts.</p>
-          </div>
-        </div>
-
-        <div class="mindset-item">
-          <div class="mindset-icon-box">
-            <i class="fa-solid fa-people-group"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 1rem;">Collaborative & Explainer Mindset</h4>
-            <p style="color: var(--text-muted); font-size: 0.88rem;">Working seamlessly in teams and communicating data insights with humor and clarity.</p>
-          </div>
-        </div>
-
-        <div class="mindset-item">
-          <div class="mindset-icon-box">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <div>
-            <h4 style="font-size: 1rem;">Data Integrity & Audit</h4>
-            <p style="color: var(--text-muted); font-size: 0.88rem;">Auditing raw datasets and designing relational schemas before drawing conclusions.</p>
           </div>
         </div>
       </div>
