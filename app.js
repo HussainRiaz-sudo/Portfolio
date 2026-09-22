@@ -143,6 +143,46 @@ function initRoleTyping() {
 /* Projects Catalog with Verified Slide Presentation Data */
 const projectsData = [
   {
+    id: 'bike-sales-excel',
+    title: 'Bike Sales Analysis & Customer Intelligence Dashboard',
+    date: 'Sep 2026 – Sep 2026',
+    association: 'Personal Project',
+    origin: 'personal',
+    focus: ['excel'],
+    icon: 'fa-bicycle',
+    badge: 'Excel Data Analytics',
+    image: 'assets/bike_sales/bike_dashboard_1.jpg',
+    images: [
+      'assets/bike_sales/bike_dashboard_1.jpg',
+      'assets/bike_sales/bike_dashboard_2.jpg',
+      'assets/bike_sales/bike_dashboard_3.jpg',
+      'assets/bike_sales/bike_dashboard_4.jpg'
+    ],
+    tech: ['Excel', 'Data Cleaning', 'Pivot Tables', 'IFS Logic', 'Dashboard Design', 'Customer Segmentation', 'Demographic Analysis'],
+    hasRepoLink: true,
+    repoLink: 'https://github.com/HussainRiaz-sudo/Bike-Sales-Analysis',
+    description: `Conducted an end-to-end demographic and behavioral analysis on 1,000 retail customer profiles across North America, Europe, and Pacific in Microsoft Excel to model the core determinants of bicycle purchasing.
+
+Data Architecture & Integrity Safeguards:
+• Implemented an immutable raw-data backup sheet ('bike_buyers') to guarantee auditability and zero-risk rollback capability.
+• Maintained an isolated 'Working Sheet' for all cleaning transformations, deduplication, and formula calculations.
+
+Data Cleaning & Feature Engineering:
+• Audited 1,000+ entries, eliminating duplicate records to prevent skewed averages and double-counting in pivot metrics.
+• Standardized abbreviated codes ('M'/'S' → Married/Single; 'M'/'F' → Male/Female) and applied USD currency formatting ($#,##0).
+• Engineered a multi-tier 'Age Brackets' attribute using nested IFS logic (=IFS(L2 < 31, "Young", L2 <= 49, "Middle Age", L2 >= 50, "Old Age")) to categorize continuous ages into actionable target segments.
+
+Key Analytical Highlights & Insights:
+• Income Differential: Bicycle buyers systematically earn higher average income across genders ($57,963 vs $54,875, a +5.63% overall income lift; Male buyers: $60,124 vs $56,208 [+6.97%]; Female buyers: $55,774 vs $53,440 [+4.37%]).
+• Middle-Age Dominance: Customers aged 31–49 comprise 61.7% of the total customer base and generate 67.4% of total bicycle sales (52.51% within-bracket conversion rate), making them the anchor target demographic.
+• Commute Distance Utility Curve: Purchase likelihood peaks at 2–5 miles (58.64%) and 0–1 miles (54.64%), then drops precipitously to 29.73% for commutes over 10 miles where motor vehicles dominate.
+• Regional Performance: Pacific leads with a 58.85% conversion rate, Europe records 49.33%, while North America holds the largest volume (508 customers) with 43.31% conversion, representing prime expansion upside.
+
+Executive Dashboard & Decision Framework:
+• Built synchronized Pivot Tables connected to interactive Slicers (Marital Status, Region, Education, Home Owner) for real-time scenario modeling.
+• Formulated data-driven recommendations: prioritize middle-age marketing spend, introduce 0–5 mile commuter starter packs, launch e-bikes/hybrids for >10 mile commuters, and deploy regional incentives in North America.`
+  },
+  {
     id: 'databel-churn-excel',
     title: 'Databel Customer Churn EDA & Data Preparation',
     date: 'Aug 2026 – Aug 2026',
@@ -290,6 +330,13 @@ function initProjectsHub() {
   const focusBtns = document.querySelectorAll('.project-focus-chips .tag-btn');
   const originBtns = document.querySelectorAll('.project-origin-chips .tag-btn');
   if (!container) return;
+
+  const univCount = projectsData.filter(p => p.origin === 'university').length;
+  const persCount = projectsData.filter(p => p.origin === 'personal').length;
+  const univBtn = document.querySelector('.project-origin-chips [data-origin="university"]');
+  const persBtn = document.querySelector('.project-origin-chips [data-origin="personal"]');
+  if (univBtn) univBtn.textContent = `University Projects (${univCount})`;
+  if (persBtn) persBtn.textContent = `Personal Projects (${persCount})`;
 
   let activeFocus = 'all';
   let activeOrigin = 'all';
