@@ -650,6 +650,24 @@ function initCertificationsFilter() {
   if (!filterBtns.length || !certCards.length) return;
 
   filterBtns.forEach(btn => {
+    const cat = btn.getAttribute('data-cert-cat');
+    let count = 0;
+    if (cat === 'all') {
+      count = certCards.length;
+    } else {
+      count = Array.from(certCards).filter(c => {
+        const cardCat = c.getAttribute('data-cert-category');
+        if (cat === 'other' || cat === 'others' || cat === 'leadership') {
+          return cardCat === 'leadership' || cardCat === 'other' || cardCat === 'others';
+        }
+        return cardCat === cat;
+      }).length;
+    }
+    const baseText = btn.textContent.replace(/\s*\(\d+\)/, '');
+    btn.textContent = `${baseText} (${count})`;
+  });
+
+  filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -658,11 +676,15 @@ function initCertificationsFilter() {
 
       certCards.forEach(card => {
         const cardCat = card.getAttribute('data-cert-category');
-        if (selectedCategory === 'all' || cardCat === selectedCategory) {
-          card.style.display = 'flex';
+        let matches = false;
+        if (selectedCategory === 'all') {
+          matches = true;
+        } else if (selectedCategory === 'other' || selectedCategory === 'others' || selectedCategory === 'leadership') {
+          matches = (cardCat === 'leadership' || cardCat === 'other' || cardCat === 'others');
         } else {
-          card.style.display = 'none';
+          matches = (cardCat === selectedCategory);
         }
+        card.style.display = matches ? 'flex' : 'none';
       });
     });
   });

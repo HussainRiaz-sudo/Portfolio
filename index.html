@@ -400,7 +400,7 @@
     </div>
     <div class="section-header">
       <h2 class="section-title">Certifications & Accreditations</h2>
-      <p class="section-subtitle">Professional certifications in data and AI domains.</p>
+      <p class="section-subtitle">Professional certifications across AI, data analytics, and leadership domains.</p>
     </div>
 
     <!-- Certifications Category Filter Chips -->
@@ -408,14 +408,151 @@
       <div class="filter-row">
         <span class="filter-label">Filter:</span>
         <div class="cert-category-chips">
-          <button class="tag-btn active" data-cert-cat="all">All Certifications (8)</button>
+          <button class="tag-btn active" data-cert-cat="all">All Certifications (12)</button>
+          <button class="tag-btn" data-cert-cat="ai">AI Related Certifications (6)</button>
           <button class="tag-btn" data-cert-cat="data">Data Related Certifications (5)</button>
-          <button class="tag-btn" data-cert-cat="ai">AI Related Certifications (3)</button>
+          <button class="tag-btn" data-cert-cat="leadership">Leadership & Management (1)</button>
         </div>
       </div>
     </div>
 
     <div class="certifications-grid">
+      <!-- Cert: Google AI Professional (October 24, 2026) -->
+      <div class="cert-card" data-cert-category="ai">
+        <div class="cert-img-box" onclick="openCertImageModal('certs/google_ai_professional.jpg', 'Google AI Professional — Google')">
+          <img src="certs/google_ai_professional.jpg" alt="Google AI Professional Certificate" loading="lazy" decoding="async">
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
+          </div>
+        </div>
+        <div class="cert-body">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge-tag" style="background: rgba(88, 166, 255, 0.15); color: var(--accent-blue);">
+                <i class="fa-brands fa-google"></i> Professional Certificate
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Google AI Professional</h3>
+            <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.82rem; margin-bottom: 0.75rem;">
+              Google • Coursera (Certified October 24, 2026)
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Completed a multi-course specialization applying generative AI across research, data analysis, project planning, and application development. Leveraged prompt chaining and Gemini in Sheets to clean messy datasets, generate formulas via natural language, and visualize KPIs. Built and deployed custom AI workflow applications using natural-language coding (&quot;vibe coding&quot;) in Google AI Studio while enforcing human-in-the-loop governance and the ACT framework.
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <button onclick="openCertImageModal('certs/google_ai_professional.jpg', 'Google AI Professional — Google')" style="background: transparent; border: none; color: var(--accent-teal); font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+              <i class="fa-solid fa-image"></i> View Certificate
+            </button>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/OI3SCDD8BQ7D" target="_blank" style="font-weight: 600; font-size: 0.85rem;">
+              Verify Credential <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cert: Google People Management Essentials (October 22, 2026) -->
+      <div class="cert-card" data-cert-category="leadership">
+        <div class="cert-img-box" onclick="openCertImageModal('certs/google_people_management_essentials.jpg', 'Google People Management Essentials — Google')">
+          <img src="certs/google_people_management_essentials.jpg" alt="Google People Management Essentials Certificate" loading="lazy" decoding="async">
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
+          </div>
+        </div>
+        <div class="cert-body">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold);">
+                <i class="fa-solid fa-users"></i> Leadership & Management
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Google People Management Essentials</h3>
+            <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.82rem; margin-bottom: 0.75rem;">
+              Google • Coursera (Certified October 22, 2026)
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Trained in data-driven people management built on Google’s core manager framework (Deliver Results, Develop People, Build Community). Applied structured methodologies, including the Situation-Behavior-Impact (SBI) feedback model and SMART goal setting, to foster open communication, delegate effectively, and coach high-performing teams. Leveraged generative AI tools to streamline 1-on-1 check-ins, track performance, and optimize leadership productivity.
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <button onclick="openCertImageModal('certs/google_people_management_essentials.jpg', 'Google People Management Essentials — Google')" style="background: transparent; border: none; color: var(--accent-teal); font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+              <i class="fa-solid fa-image"></i> View Certificate
+            </button>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/EBZN9EPK9137" target="_blank" style="font-weight: 600; font-size: 0.85rem;">
+              Verify Credential <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cert: Google Prompting Essentials (October 16, 2026) -->
+      <div class="cert-card" data-cert-category="ai">
+        <div class="cert-img-box" onclick="openCertImageModal('certs/google_prompting_essentials.jpg', 'Google Prompting Essentials — Google')">
+          <img src="certs/google_prompting_essentials.jpg" alt="Google Prompting Essentials Certificate" loading="lazy" decoding="async">
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
+          </div>
+        </div>
+        <div class="cert-body">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge-tag" style="background: rgba(46, 160, 67, 0.15); color: var(--accent-teal);">
+                <i class="fa-solid fa-terminal"></i> Prompt Engineering
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Google Prompting Essentials</h3>
+            <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.82rem; margin-bottom: 0.75rem;">
+              Google • Coursera (Certified October 16, 2026)
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Mastered Google’s 5-step prompting framework (Task, Context, References, Evaluate, Iterate) to design structured instructions for LLMs. Applied advanced techniques—including few-shot, chain-of-thought, prompt chaining, and multimodal prompting—to break down complex logic, accelerate data analysis, and decipher spreadsheets. Trained in building reusable AI workflows and critically auditing model outputs to mitigate hallucinations and algorithmic bias.
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <button onclick="openCertImageModal('certs/google_prompting_essentials.jpg', 'Google Prompting Essentials — Google')" style="background: transparent; border: none; color: var(--accent-teal); font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+              <i class="fa-solid fa-image"></i> View Certificate
+            </button>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/FY1KE58CFIE8" target="_blank" style="font-weight: 600; font-size: 0.85rem;">
+              Verify Credential <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cert: Google AI Essentials (October 15, 2026) -->
+      <div class="cert-card" data-cert-category="ai">
+        <div class="cert-img-box" onclick="openCertImageModal('certs/google_ai_essentials.jpg', 'Google AI Essentials — Google')">
+          <img src="certs/google_ai_essentials.jpg" alt="Google AI Essentials Certificate" loading="lazy" decoding="async">
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
+          </div>
+        </div>
+        <div class="cert-body">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge-tag" style="background: rgba(46, 160, 67, 0.15); color: var(--accent-teal);">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> AI Essentials
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Google AI Essentials</h3>
+            <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.82rem; margin-bottom: 0.75rem;">
+              Google • Coursera (Certified October 15, 2026)
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Developed practical proficiency in foundational AI, machine learning, and generative AI models. Applied structured prompt engineering (including few-shot prompting and iterative refinement) and human-in-the-loop workflows to accelerate data organization, research, and task automation across Google Workspace and Gemini. Trained in responsible AI governance to audit model outputs, mitigate algorithmic bias, and address data security and privacy risks.
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <button onclick="openCertImageModal('certs/google_ai_essentials.jpg', 'Google AI Essentials — Google')" style="background: transparent; border: none; color: var(--accent-teal); font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+              <i class="fa-solid fa-image"></i> View Certificate
+            </button>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/UBNMUOYQNFCA" target="_blank" style="font-weight: 600; font-size: 0.85rem;">
+              Verify Credential <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- Cert 1: Associate Data Analyst (September 13, 2026) -->
       <div class="cert-card" data-cert-category="data">
         <div class="cert-img-box" onclick="openCertImageModal('certs/datacamp_data_analyst_associate.jpg', 'Associate Data Analyst — DataCamp')">
