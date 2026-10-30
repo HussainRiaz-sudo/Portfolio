@@ -222,7 +222,12 @@ Key Analytical Highlights & Insights:
     tech: ['JavaScript', 'HTML5/CSS3', 'PIN Security', 'Chart.js', 'Google Sheets API', 'PDF Reports', 'Financial Analytics'],
     hasRepoLink: true,
     repoLink: 'https://github.com/HussainRiaz-sudo/Patient-Tracker',
-    description: `Dr Naila Patient Tracker is a high-performance, offline-first web application designed for medical practitioners to manage patient intake, ward admissions, surgical procedures, and revenue-sharing across multiple clinical locations. Built using vanilla JavaScript, HTML5, and CSS3, it features an instant multi-hospital switcher supporting custom split algorithms in Pakistani Rupees (PKR) alongside specialized 100% Doctor Payout modules for procedures and ward admission fees. The platform includes a session-based 4-digit PIN Security Lock protecting accumulated financial ledgers and reports, a 1-tap Dark/Light Mode theme engine, retroactive cross-hospital Patient History profiles with fuzzy base name matching, an interactive decision modal workflow, clean autocomplete patient deduplication, Chart.js financial analytics, and an automated background sync engine connecting to Google Sheets. It empowers doctors to generate official, multi-page Itemized Monthly PDF Settlement Reports containing patient serial numbers, consultation date/time stamps, and signature verification blocks for hospital proof of earnings.`
+    description: `Patient Tracker is a high-performance, offline-first web application built with vanilla JavaScript, HTML5, and CSS3 for a medical practitioner to manage patient intake, ward admissions, surgical procedures, and revenue-sharing across multiple clinical locations:
+
+• Financial Analytics & PDF Reports: Chart.js financial analytics alongside official, multi-page Itemized Monthly PDF Settlement Reports containing patient serial numbers, consultation date/time stamps, and signature verification blocks.
+• Multi-Hospital PKR Split Engine: Instant multi-hospital switcher supporting custom revenue-split algorithms in Pakistani Rupees (PKR), plus specialized 100% Doctor Payout modules for procedures and ward admission fees.
+• Offline-First Workflow & Security: Session-based 4-digit PIN lock, retroactive cross-hospital patient history with fuzzy base-name matching, interactive decision modals, autocomplete patient deduplication, and 1-tap Dark/Light Mode.
+• Automated Cloud Sync: Automated background sync engine connecting clinical and financial ledgers to Google Sheets.`
   },
   {
     id: 'baab-ul-salah',
@@ -264,12 +269,12 @@ My Role — Backend & Machine Learning Engineer: Astronomical baseline calculati
     focus: ['techwar'],
     icon: 'fa-trophy',
     badge: 'TechWar 1st Place Winner 🏆',
-    tech: ['Cybersecurity', 'AES-256', 'Zero-Knowledge Architecture', 'Product Pitching', 'Usability'],
+    tech: ['Cybersecurity', 'AES-256', 'Secure Credential Storage', 'Product Pitching', 'Usability'],
     hasRepoLink: false,
     description: `Locally stored credential manager built with AES-256 encryption. Won 1st place in the Cyber Security Competition at TechWar for security architecture, live product pitching, and usability.
 
-Zero-Knowledge Security Architecture & Live Stage Defense:
-Engineered with strict Zero-Knowledge principles — no master backdoor keys or plaintext passwords are stored. During the live TechWar Q&A panel, when challenged on data unrecoverability if a user loses their vault password, successfully defended the architecture by establishing that zero-recovery is an intentional security design choice (eliminating backdoor vectors, analogous to Apple ID & Bitwarden end-to-end security standards), securing top marks for technical justification and executive presence.`
+Local Vault Security & Live Stage Defense:
+Engineered with no master backdoor key and no plaintext passwords stored; password recovery is deliberately impossible. During the live TechWar Q&A panel, when challenged on data unrecoverability if a user loses their vault password, successfully defended the architecture by establishing that zero-recovery is an intentional security design choice (eliminating backdoor vectors, comparable to the no-recovery design of password managers such as Bitwarden), securing top marks for technical justification and executive presence.`
   },
   {
     id: 'todo-django-rest',
