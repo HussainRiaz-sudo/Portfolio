@@ -408,15 +408,49 @@
       <div class="filter-row">
         <span class="filter-label">Filter:</span>
         <div class="cert-category-chips">
-          <button class="tag-btn active" data-cert-cat="all">All Certifications (12)</button>
+          <button class="tag-btn active" data-cert-cat="all">All Certifications (13)</button>
           <button class="tag-btn" data-cert-cat="ai">AI Related Certifications (6)</button>
           <button class="tag-btn" data-cert-cat="data">Data Related Certifications (5)</button>
-          <button class="tag-btn" data-cert-cat="leadership">Leadership & Management (1)</button>
+          <button class="tag-btn" data-cert-cat="leadership">Leadership & Management (2)</button>
         </div>
       </div>
     </div>
 
     <div class="certifications-grid">
+      <!-- Cert: Google Agile Essentials (November 18, 2026) -->
+      <div class="cert-card" data-cert-category="leadership">
+        <div class="cert-img-box" onclick="openCertImageModal('certs/google_agile_essentials.jpg', 'Google Agile Essentials — Google')">
+          <img src="certs/google_agile_essentials.jpg" alt="Google Agile Essentials Certificate" loading="lazy" decoding="async">
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-expand" style="margin-right: 0.4rem;"></i> Expand Certificate
+          </div>
+        </div>
+        <div class="cert-body">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+              <span class="badge-tag" style="background: rgba(210, 153, 34, 0.15); color: var(--accent-gold);">
+                <i class="fa-solid fa-users"></i> Leadership & Management
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">Google Agile Essentials</h3>
+            <p style="color: var(--accent-gold); font-family: var(--font-code); font-size: 0.82rem; margin-bottom: 0.75rem;">
+              Google • Coursera (Certified November 18, 2026)
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">
+              Applied core Scrum practices, including writing user stories, estimating effort, prioritizing product backlogs, and running Sprint Planning, Daily Scrums, Reviews, and Retrospectives. Used AI tools to streamline backlog refinement and assess team capacity.
+            </p>
+          </div>
+          <div style="border-top: 1px solid var(--border-color); padding-top: 0.85rem; display: flex; justify-content: space-between; align-items: center;">
+            <button onclick="openCertImageModal('certs/google_agile_essentials.jpg', 'Google Agile Essentials — Google')" style="background: transparent; border: none; color: var(--accent-teal); font-weight: 600; font-size: 0.85rem; cursor: pointer;">
+              <i class="fa-solid fa-image"></i> View Certificate
+            </button>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/MGQOL3R03XJD" target="_blank" style="font-weight: 600; font-size: 0.85rem;">
+              Verify Credential <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <!-- Cert: Google AI Professional (October 24, 2026) -->
       <div class="cert-card" data-cert-category="ai">
         <div class="cert-img-box" onclick="openCertImageModal('certs/google_ai_professional.jpg', 'Google AI Professional — Google')">
